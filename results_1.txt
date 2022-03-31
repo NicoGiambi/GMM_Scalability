@@ -1,0 +1,46 @@
+Run1 - local[1]
+KMeans duration: 11.6439249
+GMM duration: 164.5163269
+SGDGMM duration: 133.9399395
+
+------------------------------
+Run2 - local[1]
+KMeans duration: -----------------
+GMM duration: -----------------
+SGDGMM duration: -----------------
+
+------------------------------
+Run1 - local[4]
+KMeans duration: 6.4733927
+GMM duration: 100.4008566
+SGDGMM duration: 83.0190419
+
+------------------------------
+Run2 - local[4]
+KMeans duration: -----------------
+GMM duration: -----------------
+SGDGMM duration: -----------------
+
+------------------------------
+Run1 - local[8]
+KMeans duration: 8.2272655
+GMM duration: 96.915048
+SGDGMM duration: 76.5146668
+
+------------------------------
+Run2 - local[8]
+KMeans duration: -----------------
+GMM duration: -----------------
+SGDGMM duration: -----------------
+
+------------------------------
+Run1 - local[12]
+KMeans duration: 4.6813233
+GMM duration: 93.9263269
+SGDGMM duration: 79.789826
+
+------------------------------
+Run2 - local[12]
+KMeans duration: -----------------
+GMM duration: -----------------
+SGDGMM duration: -----------------
