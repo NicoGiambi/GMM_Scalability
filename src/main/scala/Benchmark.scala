@@ -68,6 +68,7 @@ object Benchmark {
     val data = sc.textFile(datasetPath)
     val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
 
+    println("Fitting with " + args(0) + " on " + args(1) + " model with " + args(2) + " clusters and augmentation set to " + args(3))
     fitSave(model, sc, clusters, outPath, parsedData)
 
     println()
