@@ -1,6 +1,7 @@
 import breeze.linalg.DenseVector
 import breeze.linalg.DenseMatrix
 import breeze.linalg._
+import breeze.linalg.operators._
 
 import scala.io.Source
 import scala.math.exp
@@ -49,25 +50,35 @@ object SequentialGMM {
     bestIndex
   }
 
-  def gaussian(points: Array[(Double, Double)], mu : DenseVector[Double], cov : DenseMatrix[Double]): Unit ={
-    val diff = new DenseMatrix(points.length, 2, points.map(p => (p._1 - mu(0), p._2 - mu(1))).flatMap(a => List(a._1, a._2)))
+  def minmax(points : Array[(Double, Double)]): Array[(Double, Double)] ={
+    val flatX = points.map(_._1)
+    val xMin = flatX.min
+    val xMax = flatX.max
+    val scaledX = flatX.map(p => (p - xMin) / (xMax - xMin))
+    val flatY = points.map(_._2)
+    val yMin = flatY.min
+    val yMax = flatY.max
+    val scaledY = flatY.map(p => (p - yMin) / (yMax - yMin))
+
+    val scaledPoints = for (i <- points.indices) yield (scaledX(i), scaledY(i))
+    scaledPoints.toArray
+  }
+
+  def gaussian(points: Array[(Double, Double)], pi_k : Double, mu : DenseVector[Double], cov : DenseMatrix[Double]): DenseVector[Double] = {
+    val diff = new DenseMatrix(2, points.length, points.map(p => (p._1 - mu(0), p._2 - mu(1))).flatMap(a => List(a._1, a._2)))
     val pi = math.Pi
     val g1 = 1 / (pow(2 * pi, mu.length / 2) * math.sqrt(det(cov)))
-    val dot = diff * inv(cov)
-    val dot2 = dot * diff.t
-    print()
-//    val g2 = math.exp(-0.5 * dot2)
+    val dot = diff.t * inv(cov)
+    val diag = for (i <- 0 until diff.cols)
+      yield dot(i, ::) * diff(::, i)
+    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi_k).toArray
 
-//    return np.diagonal(1 / ((2 * np.pi) ** (n / 2) * np.linalg.det(cov) ** 0.5) * np.exp(-0.5 * np.dot(np.dot(diff.T, np.linalg.inv(cov)), diff))).reshape(-1, 1)
-
-    exit(1)
+    DenseVector(gauss)
   }
 
   def expMaxStep (points: Array[(Double, Double)], clusters : Array[(Double, DenseVector[Double], DenseMatrix[Double])]): Unit = {
-    val gamma_nk = Array.fill(points.length)(Array.fill(clusters.length)(0))
-    for (c <- clusters)
-     yield gaussian(points, c._2, c._3)
-
+    val gamma_nk = for (c <- clusters)
+     yield gaussian(points, c._1, c._2, c._3)
     exit(1)
   }
 
@@ -87,13 +98,39 @@ object SequentialGMM {
 
     val startTime = System.nanoTime
 
-    val points : Array[(Double, Double)] = import_files(filename)
+    val points : Array[(Double, Double)] = minmax(import_files(filename))
+//    val points = minmax(Array((0.05, 1.413), (0.85, -0.3), (11.1, 0.4), (0.27, 0.12), (88, 12.33)))
 
-    val kPoints = Random.shuffle(points.toList).take(K).toArray
+//    val kPoints = Random.shuffle(points.toList).take(K).toArray
+    val kPoints = points.take(K)
 
     val clusters : Array[(Double, DenseVector[Double], DenseMatrix[Double])]= kPoints.map(k_p => Tuple3(1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix((1.0, 0.0), (0.0, 1.0))))
 
     expMaxStep(points, clusters)
+
+//    val mux = points.map(_._1).sum / points.length
+//    val muy = points.map(_._2).sum / points.length
+//    val mu = DenseVector(mux, muy)
+//    val diff : DenseMatrix[Double] = new DenseMatrix(2, points.length, points.map(p => (p._1 - mu(0), p._2 - mu(1))).flatMap(a => List(a._1, a._2)))
+//
+//    val a = DenseMatrix((-1.0,0.0), (1.0,0.0), (-2.0,2.0), (3.0,2.0) ,(1.0,3.0))
+//    val b = a.t * a
+//    b.map(println)
+//
+//    val cov = diff * diff.t
+//    val g = gaussian(points, mu, cov)
+//
+//
+//    points.foreach(println)
+//    println("------------------points")
+//    mu.foreach(println)
+//    println("------------------mu")
+//    diff.map(println)
+//    println("------------------diff")
+//    cov.map(println)
+//    println("------------------cov")
+//    g.foreach(println)
+//    exit(0)
 
     // loop until the total distance between one iteration's points and the next is less than the convergence distance specified
     var tempDist = Double.PositiveInfinity
