@@ -5,22 +5,15 @@ import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.rdd.RDD
 import com.github.gradientgmm.GradientGaussianMixture
-import java.nio.file.{Paths, Files}
+import java.nio.file.{Files, Paths}
 import scala.io.Source
 import scala.sys.exit
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 
 
-object Benchmark {
 
-  def import_files(path: String): Array[Float] = {
-    val lines = Source.fromFile(path)
-    val linesList = lines.getLines.toArray
-    lines.close
-    val toFloat: Array[Float] = linesList.map(_.toFloat)
-    toFloat
-  }
+object Benchmark {
 
   def fitSave(model: String, sc: SparkContext, clusters: Int, outPath: String, parsedData: RDD[Vector]): Int = {
 
@@ -53,7 +46,7 @@ object Benchmark {
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
-    val conf = new SparkConf().setMaster(args(0)).setAppName("DataImport")
+    val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
     val sc = new SparkContext(conf)
 
     val model = args(1)
@@ -65,6 +58,7 @@ object Benchmark {
     val outPath = "model/" + model + "/"
 
     val datasetPath = "datasets/dataset_" + args(3) + ".txt"
+
     val data = sc.textFile(datasetPath)
     val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
 
@@ -82,18 +76,53 @@ object Benchmark {
       val preds = estimator.predict(parsedData)
       if (!Files.exists(Paths.get(outPath + "/predictions")))
         preds.saveAsTextFile(outPath + "/predictions")
-      estimator.clusterCenters.foreach(println)
+      estimator.clusterCenters.sortWith(_(0) < _(0)).foreach(println)
     }
     else {
       val estimator = GaussianMixtureModel.load(sc, outPath)
       val preds = estimator.predict(parsedData)
       if (!Files.exists(Paths.get(outPath + "/predictions")))
         preds.saveAsTextFile(outPath + "/predictions")
-      for (i <- 0 until estimator.k) {
-        println(estimator.gaussians(i).mu)
-      }
+      estimator.gaussians.map(_.mu).sortWith(_(0) < _(1)).foreach(println)
     }
 
     sc.stop()
   }
 }
+
+
+//----------------------------------------
+//
+//Dataset 16 -- 12 core
+//
+//KMeans duration: 93.6907123
+//
+//[26.12619531736289,29.35331810814975]
+//[89.65028233580287,104.61239756541949]
+//[153.33654275703222,267.7527081611716]
+//[266.9311804979041,145.04751738109738]
+//[438.7998353724877,338.2476937506053]
+//
+//----------------------------------------
+//
+//Dataset 16 -- 1 core
+//
+//KMeans duration: 311.3623638
+//
+//[26.12619531736289,29.35331810814975]
+//[89.65028233580287,104.61239756541949]
+//[153.33654275703222,267.7527081611716]
+//[266.9311804979041,145.04751738109738]
+//[438.7998353724877,338.2476937506053]
+
+//----------------------------------------
+//
+//Dataset 1 -- 1 core
+//
+//KMeans duration: 13.9155618
+//
+//[26.12619531736289,29.35331810814975]
+//[89.65028233580287,104.61239756541949]
+//[153.33654275703222,267.7527081611716]
+//[266.9311804979041,145.04751738109738]
+//[438.7998353724877,338.2476937506053]
