@@ -51,34 +51,35 @@ object SequentialKmeans {
     val filename = "datasets/dataset_" + args(3) + ".txt"
 
     // ConvergeDist -- the threshold "distance" between iterations at which we decide we are done
-    val convergeDist = 1e-4
+//    val convergeDist = 1e-4
+    val convergeDist = 0
     val maxIter = 100
     // Parse the device status data file into pairs
 
-    val startTime = System.nanoTime
-
     val points : Array[(Double, Double)] = import_files(filename)
 
-//    points.foreach{ list => println("[" + list._1.toString + "," + list._2.toString + "]")}
+    val startTime = System.nanoTime
+
+    //    points.foreach{ list => println("[" + list._1.toString + "," + list._2.toString + "]")}
 //    println(points.length)
 
-    for ((a, b) <- points.take(10)) {
-
-      println("Width: " + a + " Height : " + b)
-
-    }
+//    for ((a, b) <- points.take(10)) {
+//
+//      println("Width: " + a + " Height : " + b)
+//
+//    }
 
     //start with K randomly selected points from the dataset as center points
 
     val kPoints = Random.shuffle(points.toList).take(K).toArray
 
-    println("K Center points initialized :")
-
-    for ((a, b) <- kPoints) {
-
-      println("Width: " + a + " Height : " + b)
-
-    }
+//    println("K Center points initialized :")
+//
+//    for ((a, b) <- kPoints) {
+//
+//      println("Width: " + a + " Height : " + b)
+//
+//    }
 
     // loop until the total distance between one iteration's points and the next is less than the convergence distance specified
     var tempDist = Double.PositiveInfinity
