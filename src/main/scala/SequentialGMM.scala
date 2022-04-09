@@ -2,7 +2,7 @@ import breeze.linalg.DenseVector
 import breeze.linalg.DenseMatrix
 import breeze.linalg._
 import breeze.linalg.operators._
-
+import ClusteringUtils._
 import scala.io.Source
 import scala.math.exp
 import scala.sys.exit
@@ -15,56 +15,6 @@ import org.apache.log4j.{Level, Logger}
 object SequentialGMM {
 
   import scala.math.pow
-
-  def import_files(path: String): Array[(Double, Double)] = {
-    val lines = Source.fromFile(path)
-    val linesList = lines.getLines.toArray
-    lines.close
-    val couples = linesList.map(_.split(" +") match {
-      case Array(s1, s2) => (s1.toDouble, s2.toDouble)
-    })
-    couples
-  }
-
-  // The squared distances between two points
-  def distanceSquared(p1: (Double, Double), p2: (Double, Double)) : Double = {
-    pow(p1._1 - p2._1, 2) + pow(p1._2 - p2._2, 2)
-  }
-
-  // The sum of two points
-  def addPoints(p1: (Double, Double), p2: (Double, Double)) : (Double, Double) = {
-    (p1._1 + p2._1, p1._2 + p2._2)
-  }
-
-  // for a point p and an array of points, return the index in the array of the point closest to p
-  def closestPoint(p: (Double, Double), kpoints: Array[(Double, Double)]): Int = {
-    var index = 0
-    var bestIndex = 0
-    var closest = Double.PositiveInfinity
-
-    for (i <- kpoints.indices) {
-      val dist = distanceSquared(p, kpoints(i))
-      if (dist < closest) {
-        closest = dist
-        bestIndex = i
-      }
-    }
-    bestIndex
-  }
-
-  def minmax(points : Array[(Double, Double)]): ((Double, Double), (Double, Double), Array[(Double, Double)]) ={
-    val flatX = points.map(_._1)
-    val xMin = flatX.min
-    val xMax = flatX.max
-    val scaledX = flatX.map(p => (p - xMin) / (xMax - xMin))
-    val flatY = points.map(_._2)
-    val yMin = flatY.min
-    val yMax = flatY.max
-    val scaledY = flatY.map(p => (p - yMin) / (yMax - yMin))
-
-    val scaledPoints = for (i <- points.indices) yield (scaledX(i), scaledY(i))
-    ((xMin, xMax), (yMin, yMax), scaledPoints.toArray)
-  }
 
   def gaussian(points: Array[(Double, Double)], pi_k : Double, mu : DenseVector[Double], cov : DenseMatrix[Double]): Array[Double] = {
     val diff = new DenseMatrix(2, points.length, points.map(p => (p._1 - mu(0), p._2 - mu(1))).flatMap(a => List(a._1, a._2)))
@@ -128,49 +78,23 @@ object SequentialGMM {
     // The device status data file(s)
     val filename = "datasets/dataset_" + args(3) + ".txt"
 
+    val (maxIter, tolerance, seed) = getHyperparameters()
+
     val (scaleX, scaleY, points) = minmax(import_files(filename))
     println(points.length)
 
     val startTime = System.nanoTime
 
-    // ConvergeDist -- the threshold "distance" between iterations at which we decide we are done
-    val convergeDist = 1e-4 / max(scaleX._2, scaleY._2)
-    val maxIter = 100
-    // Parse the device status data file into pairs
-
-
     //    val points = minmax(Array((0.05, 1.413), (0.85, -0.3), (11.1, 0.4), (0.27, 0.12), (88, 12.33)))
-
-    val kPoints = Random.shuffle(points.toList).take(K).toArray
+    val kPoints = seed.shuffle(points.toList).take(K).toArray
 //    val kPoints = points.take(K)
 
     var clusters : Array[(Int, Double, DenseVector[Double], DenseMatrix[Double])]= kPoints.zipWithIndex.map {
       case (k_p, id) => Tuple4(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
     }
 
-//    val mux = points.map(_._1).sum / points.length
-//    val muy = points.map(_._2).sum / points.length
-//    val mu = DenseVector(mux, muy)
-//    val diff : DenseMatrix[Double] = new DenseMatrix(2, points.length, points.map(p => (p._1 - mu(0), p._2 - mu(1))).flatMap(a => List(a._1, a._2)))
-//
-//    val a = DenseMatrix((-1.0,0.0), (1.0,0.0), (-2.0,2.0), (3.0,2.0) ,(1.0,3.0))
-//    val b = a.t * a
-//    b.map(println)
-//
-//    val cov = diff * diff.t
-//    val g = gaussian(points, mu, cov)
-//
-//
-//    points.foreach(println)
-//    println("------------------points")
-//    mu.foreach(println)
-//    println("------------------mu")
-//    diff.map(println)
-//    println("------------------diff")
-//    cov.map(println)
-//    println("------------------cov")
-//    g.foreach(println)
-//    exit(0)
+    println("Starting Centroids: ")
+    clusters.map(_._3).map(p => ((p(0) * (scaleX._2 - scaleX._1)) + scaleX._1, (p(1) * (scaleY._2 - scaleY._1)) + scaleY._1)).sortWith(_._1 < _._1).foreach(println)
 
     // loop until the total distance between one iteration's points and the next is less than the convergence distance specified
     var tempDist = Double.PositiveInfinity
@@ -195,6 +119,7 @@ object SequentialGMM {
     println()
     println("Final center points :")
     clusters.map(_._3).map(p => ((p(0) * (scaleX._2 - scaleX._1)) + scaleX._1, (p(1) * (scaleY._2 - scaleY._1)) + scaleY._1)).sortWith(_._1 < _._1).foreach(println)
+//    clusters.map(_._4).foreach(println)
   }
 }
 
@@ -209,3 +134,10 @@ object SequentialGMM {
 //(57.482978113970944,66.89993006257836)
 //(121.18373122223119,138.09760439894762)
 //(283.5337149247836,244.98232181715147)
+
+
+//[36.01491113374514,87.71101610162727]
+//[120.55810767103132,134.37565684621637]
+//[57.240024352732476,136.73580375707843]
+//[40.981064455981446,89.33852042182791]
+//[41.97922762455123,77.07481201319663]

@@ -1,36 +1,50 @@
+import ClusteringUtils._
+import breeze.linalg.{DenseMatrix, DenseVector}
+import org.apache.spark.mllib.stat.distribution.MultivariateGaussian
 import org.apache.spark.mllib.clustering.KMeansModel
 import org.apache.spark.{SparkConf, SparkContext}
 import org.apache.spark.mllib.clustering.{GaussianMixture, GaussianMixtureModel, KMeans}
-import org.apache.spark.mllib.linalg.Vectors
-import org.apache.spark.mllib.linalg.Vector
+import org.apache.spark.mllib.linalg.{Matrices, Matrix, Vector, Vectors}
 import org.apache.spark.rdd.RDD
 import com.github.gradientgmm.GradientGaussianMixture
+
 import java.nio.file.{Files, Paths}
 import scala.io.Source
 import scala.sys.exit
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 
+import scala.util.Random
 
 
 object Benchmark {
 
-  def fitSave(model: String, sc: SparkContext, clusters: Int, outPath: String, parsedData: RDD[Vector]): Int = {
+  def fitSave(model: String, sc: SparkContext, clusters: Int, outPath: String, parsedData: RDD[Vector], maxIter: Int, tolerance: Double, kPoints: Array[(Double, Double)]): Int = {
 
     val t1 = System.nanoTime
 
     if (model.equals("KMeans")) {
-      val est = new KMeans().setK(clusters).setMaxIterations(100).run(parsedData)
+      val est = new KMeans().setK(clusters).setMaxIterations(maxIter).setEpsilon(tolerance).run(parsedData)
       if (!Files.exists(Paths.get(outPath)))
         est.save(sc, outPath)
     }
     else if (model.equals("GMM")) {
-      val est = new GaussianMixture().setK(clusters).setMaxIterations(100).run(parsedData)
+      val mvWeights = for (i <- kPoints.indices) yield 1.0 / kPoints.length
+      val mvGaussians = for (k_p <- kPoints) yield {
+        val initMu = Vectors.dense(Array(k_p._1, k_p._2))
+        val initCov = Matrices.dense(2, 2, DenseMatrix.eye[Double](2).toArray)
+        new MultivariateGaussian(initMu, initCov)
+      }
+      val initModel = new GaussianMixtureModel(weights = mvWeights.toArray, gaussians = mvGaussians)
+      println("Starting Centroids: ")
+       initModel.gaussians.map(_.mu).sortWith(_(0) < _(0)).foreach(println)
+      // initModel.gaussians.map(_.sigma).foreach(println)
+      val est = new GaussianMixture().setK(clusters).setMaxIterations(maxIter).setConvergenceTol(tolerance).run(parsedData)
       if (!Files.exists(Paths.get(outPath)))
         est.save(sc, outPath)
     }
     else if (model.equals("SGDGMM")) {
-      val est = GradientGaussianMixture.fit(data = parsedData, k = clusters, kMeansIters = 0, kMeansTries = 0, maxIter = 100).toSparkGMM
+      val est = GradientGaussianMixture.fit(data = parsedData, k = clusters, kMeansIters = 0, kMeansTries = 0, maxIter = maxIter).toSparkGMM
       if (!Files.exists(Paths.get(outPath)))
         est.save(sc, outPath)
     }
@@ -57,13 +71,18 @@ object Benchmark {
 
     val outPath = "model/" + model + "/"
 
-    val datasetPath = "datasets/dataset_" + args(3) + ".txt"
+    val filename = "datasets/dataset_" + args(3) + ".txt"
 
-    val data = sc.textFile(datasetPath)
+    val (maxIter, tolerance, seed) = getHyperparameters()
+
+    val points = import_files(filename)
+    val data = sc.textFile(filename)
     val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
 
+    val kPoints = seed.shuffle(points.toList).take(clusters).toArray
+
     println("Fitting with " + args(0) + " on " + args(1) + " model with " + args(2) + " clusters and augmentation set to " + args(3))
-    fitSave(model, sc, clusters, outPath, parsedData)
+    fitSave(model, sc, clusters, outPath, parsedData, maxIter, tolerance, kPoints)
 
     println()
     println("------------------------------------")
@@ -76,14 +95,14 @@ object Benchmark {
       val preds = estimator.predict(parsedData)
       if (!Files.exists(Paths.get(outPath + "/predictions")))
         preds.saveAsTextFile(outPath + "/predictions")
-      estimator.clusterCenters.sortWith(_(0) < _(0)).foreach(println)
+      estimator.clusterCenters.sortWith(_ (0) < _ (0)).foreach(println)
     }
     else {
       val estimator = GaussianMixtureModel.load(sc, outPath)
       val preds = estimator.predict(parsedData)
       if (!Files.exists(Paths.get(outPath + "/predictions")))
         preds.saveAsTextFile(outPath + "/predictions")
-      estimator.gaussians.map(_.mu).sortWith(_(0) < _(1)).foreach(println)
+      estimator.gaussians.map(_.mu).sortWith(_ (0) < _ (0)).foreach(println)
     }
 
     sc.stop()
@@ -131,7 +150,7 @@ object Benchmark {
 //
 //Dataset 1 -- 1 core
 //
-//GMM duration: 13.9155618
+//GMM duration: 192.7647633
 //
 //[10.325164928633521,14.085490970190543]
 //[25.762871742157678,31.37923392165051]

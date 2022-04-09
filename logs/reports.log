@@ -4313,3 +4313,2092 @@ java.lang.InterruptedException
 2022-04-07 20:48:33 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
 2022-04-07 20:48:33 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
 2022-04-07 20:48:33 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-07 22:16:32 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-07 22:16:32 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-07 22:16:32 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-07 22:16:32 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-07 22:16:32 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-07 22:16:32 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-07 22:16:32 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-07 22:16:32 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-07 22:16:32 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-07 22:16:32 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-07 22:16:32 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-07 22:16:32 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-07 22:16:32 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-07 22:16:32 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-07 22:16:32 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-07 22:16:32 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-07 22:16:32 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-07 22:16:32 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-07 22:16:32 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-07 22:16:32 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-07 22:16:32 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-07 22:16:32 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-07 22:16:32 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-07 22:16:32 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-07 22:16:32 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-07 22:16:32 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-07 22:16:32 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-07 22:16:32 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18944 (auto-detected)
+2022-04-07 22:16:32 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-07 22:16:32 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-07 22:16:33 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-07 22:16:33 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-07 22:16:33 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-07 22:16:33 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-07 22:16:33 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-07 22:16:33 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-07 22:16:38 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-07 22:16:38 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-07 22:16:38 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-07 22:16:38 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 15:19:24 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:19:24 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:19:24 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:19:24 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:19:24 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:19:24 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:19:24 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:19:24 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:19:24 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:19:24 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:19:24 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:19:24 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:19:24 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:19:24 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:19:24 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:19:24 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:19:24 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:19:24 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:19:24 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:19:24 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:19:24 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:19:24 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:19:24 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:19:24 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:19:24 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:19:24 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:19:24 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:19:24 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 27352 (auto-detected)
+2022-04-08 15:19:24 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:19:24 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:19:24 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:19:24 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:19:24 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:19:24 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:19:24 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:19:24 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:19:27 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 15:19:27 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 15:19:27 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 15:19:27 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 15:22:44 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:22:44 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:22:44 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:22:44 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:22:44 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:22:44 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:22:44 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:22:44 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:22:44 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:22:44 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:22:44 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:22:44 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:22:44 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:22:44 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:22:44 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:22:44 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:22:44 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:22:44 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:22:44 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:22:44 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:22:44 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:22:44 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:22:44 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:22:44 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:22:44 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:22:44 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:22:44 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:22:45 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:22:45 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:22:45 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:22:45 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:22:45 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 11776 (auto-detected)
+2022-04-08 15:22:45 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:22:45 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:22:45 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:22:45 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:22:45 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:22:45 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:22:45 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:22:45 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:22:48 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 15:22:48 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 15:22:48 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 15:22:48 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 15:29:27 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:29:27 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:29:27 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:29:27 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:29:27 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:29:27 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:29:27 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:29:27 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:29:27 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:29:27 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:29:27 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:29:27 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:29:27 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:29:27 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:29:27 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:29:27 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:29:27 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:29:27 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:29:27 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:29:27 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:29:27 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:29:27 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:29:27 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:29:27 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:29:27 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:29:27 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:29:27 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:29:27 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 404 (auto-detected)
+2022-04-08 15:29:27 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:29:27 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:29:27 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:29:27 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:29:27 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:29:27 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:29:27 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:29:27 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:29:29 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:29:29 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:29:29 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3c45e81e
+2022-04-08 15:29:29 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:29:29 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:29:29 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:29:29 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:29:29 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:30:09 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:30:09 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:30:09 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:30:09 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:30:10 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:30:10 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:30:10 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:30:10 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:30:10 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:30:10 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:30:10 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:30:10 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:30:10 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:30:10 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:30:10 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:30:10 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:30:10 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:30:10 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:30:10 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:30:10 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:30:10 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:30:10 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:30:10 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:30:10 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:30:10 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:30:10 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:30:10 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:30:10 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 27876 (auto-detected)
+2022-04-08 15:30:10 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:30:10 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:30:10 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:30:10 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:30:10 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:30:10 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:30:10 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:30:10 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:30:12 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:30:12 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:30:12 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@f5d7b20
+2022-04-08 15:30:12 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:30:12 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:30:12 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:30:12 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:30:12 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:30:17 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 15:30:17 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 15:30:17 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 15:30:17 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 15:36:53 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:36:53 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:36:53 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:36:53 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:36:53 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:36:53 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:36:53 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:36:53 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:36:53 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:36:53 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:36:53 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:36:53 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:36:53 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:36:53 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:36:53 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:36:53 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:36:53 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:36:53 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:36:53 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:36:53 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:36:53 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:36:53 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:36:53 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:36:53 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:36:54 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:36:54 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:36:54 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:36:54 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 20788 (auto-detected)
+2022-04-08 15:36:54 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:36:54 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:36:54 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:36:54 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:36:54 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:36:54 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:36:54 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:36:54 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:36:56 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:36:56 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:36:56 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@38dcaacc
+2022-04-08 15:36:56 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:36:56 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:36:56 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:36:56 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:36:56 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:38:06 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:38:06 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:38:06 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:38:06 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:38:06 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:38:06 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:38:06 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:38:06 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:38:06 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:38:06 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:38:06 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:38:06 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:38:06 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:38:06 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:38:06 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:38:06 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:38:06 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:38:06 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:38:06 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:38:06 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:38:06 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:38:06 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:38:06 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:38:06 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:38:06 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:38:06 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:38:06 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:38:06 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18512 (auto-detected)
+2022-04-08 15:38:06 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:38:06 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:38:06 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:38:06 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:38:06 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:38:06 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:38:06 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:38:06 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:38:09 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:38:09 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:38:09 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@38dcaacc
+2022-04-08 15:38:09 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:38:09 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:38:09 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:38:09 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:38:09 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:39:57 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:39:57 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:39:57 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:39:57 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:39:57 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:39:57 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:39:57 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:39:57 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:39:57 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:39:57 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:39:57 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:39:57 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:39:57 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:39:57 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:39:57 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:39:57 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:39:57 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:39:57 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:39:57 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:39:57 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:39:57 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:39:57 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:39:57 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:39:57 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:39:57 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:39:57 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:39:57 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:39:57 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 14524 (auto-detected)
+2022-04-08 15:39:57 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:39:57 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:39:57 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:39:57 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:39:58 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:39:58 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:39:58 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:39:58 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:40:00 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:40:00 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:40:00 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@655d3b1
+2022-04-08 15:40:00 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:40:00 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:40:00 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:40:00 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:40:00 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:57:33 ERROR BlockManagerMasterEndpoint:94 - Fail to know the executor driver is alive or not.
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:101)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:109)
+	at org.apache.spark.util.RpcUtils$.makeDriverRef(RpcUtils.scala:36)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.driverEndpoint$lzycompute(BlockManagerMasterEndpoint.scala:112)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.org$apache$spark$storage$BlockManagerMasterEndpoint$$driverEndpoint(BlockManagerMasterEndpoint.scala:111)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:234)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:225)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.util.Failure.recover(Try.scala:234)
+	at scala.concurrent.Future.$anonfun$recover$1(Future.scala:395)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.rpc.RpcEndpointNotFoundException: Cannot find endpoint: spark://CoarseGrainedScheduler@LAPTOP-872B5E84:63999
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1(NettyRpcEnv.scala:148)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1$adapted(NettyRpcEnv.scala:144)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.trySuccess(Promise.scala:94)
+	at scala.concurrent.Promise.trySuccess$(Promise.scala:94)
+	at scala.concurrent.impl.Promise$DefaultPromise.trySuccess(Promise.scala:187)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.onSuccess$1(NettyRpcEnv.scala:225)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$askAbortable$5(NettyRpcEnv.scala:239)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$askAbortable$5$adapted(NettyRpcEnv.scala:238)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.Promise.success(Promise.scala:86)
+	at scala.concurrent.Promise.success$(Promise.scala:86)
+	at scala.concurrent.impl.Promise$DefaultPromise.success(Promise.scala:187)
+	at org.apache.spark.rpc.netty.LocalNettyRpcCallContext.send(NettyRpcCallContext.scala:50)
+	at org.apache.spark.rpc.netty.NettyRpcCallContext.reply(NettyRpcCallContext.scala:32)
+	at org.apache.spark.rpc.netty.RpcEndpointVerifier$$anonfun$receiveAndReply$1.applyOrElse(RpcEndpointVerifier.scala:31)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:103)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	... 3 more
+2022-04-08 15:57:40 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:57:40 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:57:40 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:57:40 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:57:40 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:57:40 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:57:40 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:57:40 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:57:40 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:57:40 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:57:40 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:57:40 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:57:40 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:57:40 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:57:40 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:57:40 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:57:40 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:57:40 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:57:40 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:57:40 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:57:40 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:57:40 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:57:40 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:57:40 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:57:40 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:57:40 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:57:40 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:57:40 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18428 (auto-detected)
+2022-04-08 15:57:40 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:57:40 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:57:40 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:57:40 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:57:41 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:57:41 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:57:41 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:57:41 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:57:43 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:57:43 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:57:43 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@61691443
+2022-04-08 15:57:43 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:57:43 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:57:43 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:57:43 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:57:43 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:57:44 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 15:57:44 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 15:58:27 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 15:58:27 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 15:58:27 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 15:58:27 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 15:58:27 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 15:58:27 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 15:58:27 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 15:58:27 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 15:58:27 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 15:58:27 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 15:58:27 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 15:58:27 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 15:58:27 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 15:58:27 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 15:58:27 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 15:58:27 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 15:58:27 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 15:58:27 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 15:58:27 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 15:58:27 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 15:58:27 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 15:58:27 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 15:58:27 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 15:58:27 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 15:58:27 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 15:58:27 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 15:58:27 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 15:58:27 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 7716 (auto-detected)
+2022-04-08 15:58:27 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 15:58:27 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 15:58:27 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 15:58:27 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 15:58:27 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 15:58:27 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 15:58:27 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 15:58:27 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 15:58:30 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 15:58:30 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 15:58:30 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@56a85fa8
+2022-04-08 15:58:30 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 15:58:30 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 15:58:30 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 15:58:30 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 15:58:30 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 15:58:31 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 15:58:31 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:01:31 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:01:31 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:01:31 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:01:31 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:01:31 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:01:31 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:01:31 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:01:31 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:01:31 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:01:31 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:01:31 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:01:31 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:01:31 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:01:31 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:01:31 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:01:31 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:01:31 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:01:31 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:01:31 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:01:31 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:01:31 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:01:31 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:01:31 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:01:31 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:01:32 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:01:32 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:01:32 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:01:32 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 13668 (auto-detected)
+2022-04-08 16:01:32 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:01:32 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:01:32 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:01:32 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:01:32 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:01:32 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:01:32 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:01:32 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:01:34 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:01:34 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:01:34 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@6a97bb6d
+2022-04-08 16:01:34 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:01:34 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:01:34 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:01:34 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:01:34 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:01:36 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:01:36 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:04:28 ERROR BlockManagerMasterEndpoint:94 - Fail to know the executor driver is alive or not.
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:101)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:109)
+	at org.apache.spark.util.RpcUtils$.makeDriverRef(RpcUtils.scala:36)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.driverEndpoint$lzycompute(BlockManagerMasterEndpoint.scala:112)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.org$apache$spark$storage$BlockManagerMasterEndpoint$$driverEndpoint(BlockManagerMasterEndpoint.scala:111)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:234)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:225)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.util.Failure.recover(Try.scala:234)
+	at scala.concurrent.Future.$anonfun$recover$1(Future.scala:395)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.rpc.RpcEndpointNotFoundException: Cannot find endpoint: spark://CoarseGrainedScheduler@LAPTOP-872B5E84:64181
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1(NettyRpcEnv.scala:148)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1$adapted(NettyRpcEnv.scala:144)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.dispatchOrAddCallback(Promise.scala:316)
+	at scala.concurrent.impl.Promise$DefaultPromise.onComplete(Promise.scala:307)
+	at scala.concurrent.impl.Promise.transformWith(Promise.scala:40)
+	at scala.concurrent.impl.Promise.transformWith$(Promise.scala:38)
+	at scala.concurrent.impl.Promise$DefaultPromise.transformWith(Promise.scala:187)
+	at scala.concurrent.Future.flatMap(Future.scala:306)
+	at scala.concurrent.Future.flatMap$(Future.scala:306)
+	at scala.concurrent.impl.Promise$DefaultPromise.flatMap(Promise.scala:187)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.asyncSetupEndpointRefByURI(NettyRpcEnv.scala:150)
+	... 17 more
+2022-04-08 16:04:35 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:04:35 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:04:35 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:04:35 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:04:35 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:04:35 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:04:35 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:04:35 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:04:35 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:04:35 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:04:35 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:04:35 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:04:35 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:04:35 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:04:35 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:04:35 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:04:35 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:04:35 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:04:35 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:04:35 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:04:35 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:04:35 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:04:35 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:04:35 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:04:35 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:04:35 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:04:35 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:04:35 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 13504 (auto-detected)
+2022-04-08 16:04:35 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:04:35 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:04:36 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:04:36 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:04:36 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:04:36 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:04:36 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:04:36 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:04:38 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:04:38 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:04:38 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@759d695d
+2022-04-08 16:04:38 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:04:38 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:04:38 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:04:38 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:04:38 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:04:39 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:04:39 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:08:19 ERROR BlockManagerMasterEndpoint:94 - Fail to know the executor driver is alive or not.
+org.apache.spark.SparkException: Exception thrown in awaitResult: 
+	at org.apache.spark.util.ThreadUtils$.awaitResult(ThreadUtils.scala:301)
+	at org.apache.spark.rpc.RpcTimeout.awaitResult(RpcTimeout.scala:75)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRefByURI(RpcEnv.scala:101)
+	at org.apache.spark.rpc.RpcEnv.setupEndpointRef(RpcEnv.scala:109)
+	at org.apache.spark.util.RpcUtils$.makeDriverRef(RpcUtils.scala:36)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.driverEndpoint$lzycompute(BlockManagerMasterEndpoint.scala:112)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint.org$apache$spark$storage$BlockManagerMasterEndpoint$$driverEndpoint(BlockManagerMasterEndpoint.scala:111)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:234)
+	at org.apache.spark.storage.BlockManagerMasterEndpoint$$anonfun$handleBlockRemovalFailure$1.applyOrElse(BlockManagerMasterEndpoint.scala:225)
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:38)
+	at scala.util.Failure.recover(Try.scala:234)
+	at scala.concurrent.Future.$anonfun$recover$1(Future.scala:395)
+	at scala.concurrent.impl.Promise.liftedTree1$1(Promise.scala:33)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:750)
+Caused by: org.apache.spark.rpc.RpcEndpointNotFoundException: Cannot find endpoint: spark://CoarseGrainedScheduler@LAPTOP-872B5E84:64251
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1(NettyRpcEnv.scala:148)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$asyncSetupEndpointRefByURI$1$adapted(NettyRpcEnv.scala:144)
+	at scala.concurrent.Future.$anonfun$flatMap$1(Future.scala:307)
+	at scala.concurrent.impl.Promise.$anonfun$transformWith$1(Promise.scala:41)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.impl.Promise.$anonfun$transform$1(Promise.scala:33)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at scala.concurrent.BatchingExecutor$Batch.processBatch$1(BatchingExecutor.scala:67)
+	at scala.concurrent.BatchingExecutor$Batch.$anonfun$run$1(BatchingExecutor.scala:82)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:23)
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:85)
+	at scala.concurrent.BatchingExecutor$Batch.run(BatchingExecutor.scala:59)
+	at scala.concurrent.Future$InternalCallbackExecutor$.unbatchedExecute(Future.scala:875)
+	at scala.concurrent.BatchingExecutor.execute(BatchingExecutor.scala:110)
+	at scala.concurrent.BatchingExecutor.execute$(BatchingExecutor.scala:107)
+	at scala.concurrent.Future$InternalCallbackExecutor$.execute(Future.scala:873)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.trySuccess(Promise.scala:94)
+	at scala.concurrent.Promise.trySuccess$(Promise.scala:94)
+	at scala.concurrent.impl.Promise$DefaultPromise.trySuccess(Promise.scala:187)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.onSuccess$1(NettyRpcEnv.scala:225)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$askAbortable$5(NettyRpcEnv.scala:239)
+	at org.apache.spark.rpc.netty.NettyRpcEnv.$anonfun$askAbortable$5$adapted(NettyRpcEnv.scala:238)
+	at scala.concurrent.impl.CallbackRunnable.run$$$capture(Promise.scala:64)
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala)
+	at org.apache.spark.util.ThreadUtils$$anon$1.execute(ThreadUtils.scala:99)
+	at scala.concurrent.impl.ExecutionContextImpl$$anon$4.execute(ExecutionContextImpl.scala:138)
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:72)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.$anonfun$tryComplete$1$adapted(Promise.scala:288)
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:288)
+	at scala.concurrent.Promise.complete(Promise.scala:53)
+	at scala.concurrent.Promise.complete$(Promise.scala:52)
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:187)
+	at scala.concurrent.Promise.success(Promise.scala:86)
+	at scala.concurrent.Promise.success$(Promise.scala:86)
+	at scala.concurrent.impl.Promise$DefaultPromise.success(Promise.scala:187)
+	at org.apache.spark.rpc.netty.LocalNettyRpcCallContext.send(NettyRpcCallContext.scala:50)
+	at org.apache.spark.rpc.netty.NettyRpcCallContext.reply(NettyRpcCallContext.scala:32)
+	at org.apache.spark.rpc.netty.RpcEndpointVerifier$$anonfun$receiveAndReply$1.applyOrElse(RpcEndpointVerifier.scala:31)
+	at org.apache.spark.rpc.netty.Inbox.$anonfun$process$1(Inbox.scala:103)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:213)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:100)
+	at org.apache.spark.rpc.netty.MessageLoop.org$apache$spark$rpc$netty$MessageLoop$$receiveLoop(MessageLoop.scala:75)
+	at org.apache.spark.rpc.netty.MessageLoop$$anon$1.run(MessageLoop.scala:41)
+	... 3 more
+2022-04-08 16:08:26 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:08:26 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:08:26 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:08:26 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:08:26 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:08:26 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:08:26 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:08:26 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:08:26 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:08:26 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:08:26 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:08:26 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:08:26 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:08:26 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:08:26 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:08:26 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:08:26 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:08:26 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:08:26 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:08:26 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:08:26 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:08:26 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:08:26 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:08:26 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:08:26 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:08:26 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:08:26 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:08:26 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 27096 (auto-detected)
+2022-04-08 16:08:26 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:08:26 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:08:26 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:08:26 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:08:26 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:08:26 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:08:26 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:08:26 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:08:29 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:08:29 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:08:29 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@13c25bfe
+2022-04-08 16:08:29 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:08:29 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:08:29 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:08:29 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:08:29 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:08:32 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:08:32 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:09:43 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:09:43 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:09:43 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:09:43 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:09:43 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:09:43 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:09:43 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:09:43 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:09:43 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:09:43 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:09:43 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:09:43 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:09:43 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:09:43 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:09:43 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:09:43 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:09:43 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:09:43 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:09:43 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:09:43 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:09:43 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:09:43 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:09:43 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:09:43 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:09:43 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:09:43 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:09:43 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:09:43 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 16280 (auto-detected)
+2022-04-08 16:09:43 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:09:43 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:09:43 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:09:43 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:09:43 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:09:43 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:09:43 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:09:43 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:09:46 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:09:46 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:09:46 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@21b847c7
+2022-04-08 16:09:46 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:09:46 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:09:46 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:09:46 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:09:46 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:09:49 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:09:49 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:12:49 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:12:49 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:12:49 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:12:49 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:12:49 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:12:49 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:12:49 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:12:49 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:12:49 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:12:49 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:12:49 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:12:49 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:12:49 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:12:49 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:12:49 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:12:49 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:12:49 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:12:49 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:12:49 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:12:49 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:12:49 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:12:49 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:12:49 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:12:49 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:12:50 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:12:50 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:12:50 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:12:50 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 15124 (auto-detected)
+2022-04-08 16:12:50 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:12:50 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:12:50 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:12:50 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:12:50 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:12:50 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:12:50 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:12:50 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:12:52 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:12:52 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:12:52 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@14123bdf
+2022-04-08 16:12:52 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:12:52 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:12:52 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:12:52 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:12:52 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:12:55 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:12:55 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:13:25 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:13:26 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:13:26 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:13:26 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:13:26 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:13:26 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:13:26 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:13:26 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:13:26 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:13:26 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:13:26 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:13:26 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:13:26 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:13:26 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:13:26 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:13:26 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:13:26 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:13:26 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:13:26 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:13:26 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:13:26 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:13:26 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:13:26 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:13:26 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:13:26 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:13:26 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:13:26 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:13:26 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18628 (auto-detected)
+2022-04-08 16:13:26 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:13:26 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:13:26 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:13:26 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:13:26 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:13:26 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:13:26 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:13:26 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:13:29 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:13:29 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:13:29 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@14123bdf
+2022-04-08 16:13:29 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:13:29 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:13:29 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:13:29 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:13:29 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:13:32 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 16:13:32 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 16:48:03 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:48:03 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:48:03 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:48:03 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:48:03 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:48:03 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:48:03 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:48:03 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:48:03 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:48:03 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:48:03 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:48:03 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:48:03 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:48:03 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:48:03 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:48:03 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:48:03 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:48:03 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:48:03 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:48:03 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:48:03 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:48:03 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:48:03 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:48:03 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:48:03 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:48:03 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:48:04 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:48:04 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 22376 (auto-detected)
+2022-04-08 16:48:04 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:48:04 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:48:04 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:48:04 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:48:04 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:48:04 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:48:04 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:48:04 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:48:06 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:48:06 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:48:06 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7a93bd62
+2022-04-08 16:48:06 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:48:06 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:48:06 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:48:06 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:48:06 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 16:49:21 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 16:49:21 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 16:49:21 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 16:49:21 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 16:49:21 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 16:49:21 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 16:49:21 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 16:49:21 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 16:49:21 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 16:49:21 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 16:49:21 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 16:49:21 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 16:49:21 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 16:49:21 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 16:49:21 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 16:49:21 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 16:49:21 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 16:49:21 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 16:49:21 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 16:49:21 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 16:49:21 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 16:49:21 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 16:49:21 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 16:49:21 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 16:49:21 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 16:49:21 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 16:49:21 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 16:49:21 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 5784 (auto-detected)
+2022-04-08 16:49:21 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 16:49:21 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 16:49:21 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 16:49:21 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 16:49:21 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 16:49:21 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 16:49:21 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 16:49:21 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 16:49:24 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 16:49:24 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 16:49:24 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@629a4a68
+2022-04-08 16:49:24 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 16:49:24 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 16:49:24 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 16:49:24 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 16:49:24 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:06:08 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:06:08 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:06:08 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:06:08 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:06:08 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:06:08 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:06:08 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:06:08 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:06:08 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:06:08 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:06:08 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:06:08 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:06:08 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:06:08 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:06:08 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:06:08 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:06:08 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:06:08 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:06:08 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:06:08 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:06:08 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:06:08 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:06:08 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:06:09 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:06:09 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:06:09 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:06:09 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:06:09 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 24716 (auto-detected)
+2022-04-08 17:06:09 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:06:09 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:06:09 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:06:09 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:06:09 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:06:09 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:06:09 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:06:09 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:06:11 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:06:11 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:06:11 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@431517b7
+2022-04-08 17:06:12 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:06:12 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:06:12 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:06:12 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:06:12 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:12:18 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:12:18 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:12:18 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:12:18 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:12:18 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:12:18 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:12:18 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:12:18 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:12:18 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:12:18 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:12:18 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:12:18 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:12:18 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:12:18 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:12:18 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:12:18 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:12:18 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:12:18 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:12:18 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:12:18 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:12:18 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:12:18 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:12:18 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:12:18 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:12:19 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:12:19 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:12:19 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:12:19 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 412 (auto-detected)
+2022-04-08 17:12:19 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:12:19 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:12:19 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:12:19 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:12:19 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:12:19 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:12:19 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:12:19 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:12:21 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:12:21 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:12:21 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@5e00c5bf
+2022-04-08 17:12:21 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:12:21 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:12:21 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:12:21 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:12:21 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:12:58 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:12:58 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:12:58 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:12:58 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:12:58 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:12:58 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:12:58 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:12:58 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:12:58 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:12:58 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:12:58 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:12:58 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:12:58 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:12:58 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:12:58 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:12:58 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:12:58 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:12:58 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:12:58 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:12:58 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:12:58 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:12:58 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:12:58 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:12:58 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:12:58 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:12:58 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:12:58 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:12:58 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 15060 (auto-detected)
+2022-04-08 17:12:58 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:12:58 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:12:58 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:12:58 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:12:58 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:12:58 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:12:58 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:12:58 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:13:02 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:13:02 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:13:02 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7f46cf61
+2022-04-08 17:13:02 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:13:02 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:13:02 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:13:02 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:13:02 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:13:33 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:13:33 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:13:33 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:13:33 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:13:33 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:13:33 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:13:33 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:13:33 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:13:33 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:13:33 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:13:33 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:13:33 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:13:33 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:13:33 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:13:33 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:13:33 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:13:33 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:13:33 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:13:33 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:13:33 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:13:33 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:13:33 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:13:33 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:13:33 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:13:34 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:13:34 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:13:34 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:13:34 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 25568 (auto-detected)
+2022-04-08 17:13:34 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:13:34 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:13:34 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:13:34 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:13:34 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:13:34 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:13:34 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:13:34 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:13:37 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:13:37 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:13:37 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@77658a3c
+2022-04-08 17:13:37 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:13:37 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:13:37 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:13:37 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:13:37 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:15:12 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:15:12 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:15:12 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:15:12 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:15:12 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:15:12 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:15:12 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:15:12 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:15:12 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:15:12 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:15:12 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:15:12 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:15:12 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:15:12 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:15:12 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:15:12 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:15:12 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:15:12 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:15:12 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:15:12 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:15:12 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:15:12 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:15:12 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:15:12 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:15:12 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:15:12 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:15:12 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:15:12 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 19212 (auto-detected)
+2022-04-08 17:15:12 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:15:12 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:15:12 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:15:12 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:15:13 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:15:13 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:15:13 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:15:13 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:15:15 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:15:15 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:15:15 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@dc7248a
+2022-04-08 17:15:15 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:15:15 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:15:15 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:15:15 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:15:15 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:22:39 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:22:39 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:22:39 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:22:39 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:22:39 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:22:39 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:22:39 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:22:39 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:22:39 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:22:39 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:22:39 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:22:39 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:22:39 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:22:39 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:22:39 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:22:39 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:22:39 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:22:39 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:22:39 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:22:39 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:22:39 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:22:39 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:22:39 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:22:39 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:22:39 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:22:39 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:22:39 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:22:39 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 4120 (auto-detected)
+2022-04-08 17:22:39 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:22:39 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:22:39 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:22:39 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:22:39 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:22:39 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:22:39 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:22:39 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:22:42 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:22:42 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:22:42 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@783977ba
+2022-04-08 17:22:42 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:22:42 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:22:42 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:22:42 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:22:42 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:22:46 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:22:46 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:22:46 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:22:46 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:23:56 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:23:56 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:23:56 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:23:56 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:23:56 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:23:56 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:23:56 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:23:56 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:23:56 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:23:56 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:23:56 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:23:56 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:23:56 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:23:56 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:23:56 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:23:56 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:23:56 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:23:56 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:23:56 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:23:56 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:23:56 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:23:56 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:23:56 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:23:56 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:23:56 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:23:56 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:23:56 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:23:56 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 27572 (auto-detected)
+2022-04-08 17:23:56 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:23:56 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:23:56 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:23:56 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:23:56 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:23:56 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:23:56 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:23:56 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:23:58 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:23:58 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:23:58 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4c9e6bf5
+2022-04-08 17:23:58 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:23:58 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:23:58 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:23:58 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:23:58 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:24:02 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:24:02 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:24:02 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:24:02 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:25:27 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:25:27 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:25:27 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:25:27 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:25:27 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:25:27 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:25:27 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:25:27 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:25:27 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:25:27 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:25:27 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:25:27 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:25:27 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:25:27 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:25:27 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:25:27 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:25:27 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:25:27 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:25:27 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:25:27 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:25:27 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:25:27 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:25:27 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:25:27 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:25:27 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:25:27 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:25:27 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:25:27 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 19496 (auto-detected)
+2022-04-08 17:25:27 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:25:27 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:25:27 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:25:27 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:25:27 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:25:27 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:25:27 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:25:27 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:25:29 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:25:29 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:25:29 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@7abc71a0
+2022-04-08 17:25:29 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:25:29 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:25:29 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:25:29 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:25:29 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:25:33 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:25:33 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:25:33 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:25:33 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:26:09 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:26:09 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:26:09 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:26:09 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:26:09 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:26:09 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:26:09 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:26:09 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:26:09 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:26:09 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:26:09 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:26:09 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:26:09 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:26:09 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:26:09 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:26:09 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:26:09 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:26:09 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:26:09 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:26:09 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:26:09 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:26:09 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:26:09 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:26:09 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:26:10 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:26:10 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:26:10 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:26:10 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 10684 (auto-detected)
+2022-04-08 17:26:10 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:26:10 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:26:10 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:26:10 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:26:10 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:26:10 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:26:10 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:26:10 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:26:12 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:26:12 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:26:12 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4dbdcd90
+2022-04-08 17:26:12 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:26:12 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:26:12 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:26:12 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:26:12 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:26:16 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:26:16 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:26:16 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:26:16 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:28:51 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:28:51 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:28:51 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:28:51 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:28:51 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:28:51 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:28:51 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:28:51 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:28:51 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:28:51 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:28:51 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:28:51 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:28:51 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:28:51 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:28:51 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:28:51 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:28:51 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:28:51 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:28:51 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:28:51 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:28:51 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:28:51 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:28:51 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:28:51 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:28:51 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:28:51 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:28:51 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:28:51 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 23100 (auto-detected)
+2022-04-08 17:28:51 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:28:51 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:28:51 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:28:51 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:28:52 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:28:52 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:28:52 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:28:52 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:28:55 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:28:55 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:28:55 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@53674db4
+2022-04-08 17:28:55 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:28:55 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:28:55 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:28:55 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:28:55 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:29:00 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:29:00 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:29:00 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:29:00 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:30:43 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:30:43 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:30:43 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:30:43 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:30:43 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:30:43 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:30:43 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:30:43 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:30:43 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:30:43 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:30:43 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:30:43 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:30:43 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:30:43 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:30:43 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:30:43 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:30:43 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:30:43 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:30:43 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:30:43 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:30:43 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:30:43 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:30:43 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:30:43 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:30:43 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:30:43 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:30:43 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:30:43 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18952 (auto-detected)
+2022-04-08 17:30:43 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:30:43 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:30:43 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:30:43 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:30:43 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:30:43 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:30:43 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:30:43 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:30:46 DEBUG AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-04-08 17:30:46 DEBUG AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-04-08 17:30:46 DEBUG ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@77804354
+2022-04-08 17:30:46 DEBUG Recycler:100 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-04-08 17:30:46 DEBUG Recycler:101 - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+2022-04-08 17:30:46 DEBUG Recycler:102 - -Dio.netty.recycler.linkCapacity: 16
+2022-04-08 17:30:46 DEBUG Recycler:103 - -Dio.netty.recycler.ratio: 8
+2022-04-08 17:30:46 DEBUG Recycler:104 - -Dio.netty.recycler.delayedQueue.ratio: 8
+2022-04-08 17:30:49 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:30:49 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:30:49 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:30:49 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:32:50 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:32:50 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:32:50 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:32:50 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:32:50 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:32:50 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:32:50 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:32:50 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:32:50 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:32:50 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:32:50 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:32:50 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:32:50 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:32:50 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:32:50 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:32:50 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:32:50 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:32:50 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:32:50 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:32:50 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:32:50 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:32:50 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:32:50 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:32:50 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:32:50 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:32:50 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:32:50 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:32:50 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 18356 (auto-detected)
+2022-04-08 17:32:50 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:32:50 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:32:50 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:32:50 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:32:51 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:32:51 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:32:51 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:32:51 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:34:09 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:34:09 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:34:09 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:34:09 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:34:09 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:34:09 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:34:09 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:34:09 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:34:09 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:34:09 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:34:09 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:34:09 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:34:09 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:34:09 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:34:09 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:34:09 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:34:09 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:34:09 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:34:09 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:34:09 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:34:09 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:34:09 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:34:09 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:34:09 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:34:09 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:34:09 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:34:09 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:34:09 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 26048 (auto-detected)
+2022-04-08 17:34:09 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:34:09 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:34:09 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:34:09 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:34:09 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:34:09 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:34:09 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:34:09 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:34:17 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:34:17 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:34:17 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:34:17 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 17:52:41 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 17:52:41 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 17:52:41 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 17:52:41 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 17:52:41 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 17:52:41 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 17:52:41 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 17:52:41 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 17:52:41 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 17:52:41 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 17:52:41 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 17:52:41 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 17:52:41 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 17:52:41 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 17:52:41 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 17:52:41 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 17:52:41 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 17:52:41 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 17:52:41 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 17:52:41 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 17:52:41 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 17:52:41 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 17:52:41 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 17:52:41 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 17:52:42 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 17:52:42 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 17:52:42 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 17:52:42 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 25380 (auto-detected)
+2022-04-08 17:52:42 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 17:52:42 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 17:52:42 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 17:52:42 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 17:52:42 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 17:52:42 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 17:52:42 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 17:52:42 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 17:52:48 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 17:52:48 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 17:52:48 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 17:52:48 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
+2022-04-08 18:08:08 DEBUG InternalLoggerFactory:45 - Using SLF4J as the default logging framework
+2022-04-08 18:08:08 DEBUG InternalThreadLocalMap:56 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-04-08 18:08:08 DEBUG InternalThreadLocalMap:59 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-04-08 18:08:08 DEBUG MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 24
+2022-04-08 18:08:08 DEBUG NioEventLoop:106 - -Dio.netty.noKeySetOptimization: false
+2022-04-08 18:08:08 DEBUG NioEventLoop:107 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-04-08 18:08:08 DEBUG PlatformDependent:1015 - Platform: Windows
+2022-04-08 18:08:08 DEBUG PlatformDependent0:408 - -Dio.netty.noUnsafe: false
+2022-04-08 18:08:08 DEBUG PlatformDependent0:876 - Java version: 8
+2022-04-08 18:08:08 DEBUG PlatformDependent0:125 - sun.misc.Unsafe.theUnsafe: available
+2022-04-08 18:08:08 DEBUG PlatformDependent0:149 - sun.misc.Unsafe.copyMemory: available
+2022-04-08 18:08:08 DEBUG PlatformDependent0:187 - java.nio.Buffer.address: available
+2022-04-08 18:08:08 DEBUG PlatformDependent0:252 - direct buffer constructor: available
+2022-04-08 18:08:08 DEBUG PlatformDependent0:326 - java.nio.Bits.unaligned: available, true
+2022-04-08 18:08:08 DEBUG PlatformDependent0:391 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+2022-04-08 18:08:08 DEBUG PlatformDependent0:398 - java.nio.DirectByteBuffer.<init>(long, int): available
+2022-04-08 18:08:08 DEBUG PlatformDependent:1058 - sun.misc.Unsafe: available
+2022-04-08 18:08:08 DEBUG PlatformDependent:1177 - -Dio.netty.tmpdir: C:\Users\bruki\AppData\Local\Temp (java.io.tmpdir)
+2022-04-08 18:08:08 DEBUG PlatformDependent:1256 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-04-08 18:08:08 DEBUG PlatformDependent:177 - -Dio.netty.maxDirectMemory: 3780640768 bytes
+2022-04-08 18:08:08 DEBUG PlatformDependent:184 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-04-08 18:08:08 DEBUG CleanerJava6:92 - java.nio.ByteBuffer.cleaner(): available
+2022-04-08 18:08:08 DEBUG PlatformDependent:204 - -Dio.netty.noPreferDirect: false
+2022-04-08 18:08:08 DEBUG PlatformDependent:919 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-04-08 18:08:08 DEBUG ResourceLeakDetector:130 - -Dio.netty.leakDetection.level: simple
+2022-04-08 18:08:08 DEBUG ResourceLeakDetector:131 - -Dio.netty.leakDetection.targetRecords: 4
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:156 - -Dio.netty.allocator.numHeapArenas: 24
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:157 - -Dio.netty.allocator.numDirectArenas: 24
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:159 - -Dio.netty.allocator.pageSize: 8192
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:164 - -Dio.netty.allocator.maxOrder: 11
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:168 - -Dio.netty.allocator.chunkSize: 16777216
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:169 - -Dio.netty.allocator.tinyCacheSize: 512
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: true
+2022-04-08 18:08:08 DEBUG PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-04-08 18:08:08 DEBUG DefaultChannelId:79 - -Dio.netty.processId: 11268 (auto-detected)
+2022-04-08 18:08:08 DEBUG NetUtil:139 - -Djava.net.preferIPv4Stack: false
+2022-04-08 18:08:08 DEBUG NetUtil:140 - -Djava.net.preferIPv6Addresses: false
+2022-04-08 18:08:09 DEBUG NetUtil:224 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-04-08 18:08:09 DEBUG NetUtil:289 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-04-08 18:08:09 DEBUG DefaultChannelId:101 - -Dio.netty.machineId: dc:fb:48:ff:fe:2f:f7:01 (auto-detected)
+2022-04-08 18:08:09 DEBUG ByteBufUtil:86 - -Dio.netty.allocator.type: pooled
+2022-04-08 18:08:09 DEBUG ByteBufUtil:95 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-04-08 18:08:09 DEBUG ByteBufUtil:98 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-04-08 18:08:16 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemLAPACK
+2022-04-08 18:08:16 WARN  LAPACK:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefLAPACK
+2022-04-08 18:08:16 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeSystemBLAS
+2022-04-08 18:08:16 WARN  BLAS:61 - Failed to load implementation from: com.github.fommil.netlib.NativeRefBLAS
