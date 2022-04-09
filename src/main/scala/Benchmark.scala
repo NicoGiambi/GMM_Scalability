@@ -37,7 +37,7 @@ object Benchmark {
       }
       val initModel = new GaussianMixtureModel(weights = mvWeights.toArray, gaussians = mvGaussians)
       println("Starting Centroids: ")
-       initModel.gaussians.map(_.mu).sortWith(_(0) < _(0)).foreach(println)
+      initModel.gaussians.map(_.mu).sortWith(_(0) < _(0)).foreach(println)
       // initModel.gaussians.map(_.sigma).foreach(println)
       val est = new GaussianMixture().setK(clusters).setMaxIterations(maxIter).setConvergenceTol(tolerance).run(parsedData)
       if (!Files.exists(Paths.get(outPath)))

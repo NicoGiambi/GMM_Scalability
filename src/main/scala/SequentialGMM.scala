@@ -29,16 +29,16 @@ object SequentialGMM {
   }
 
   def expMaxStep (points: Array[(Double, Double)], clusters : Array[(Int, Double, DenseVector[Double], DenseMatrix[Double])]):
-    (Array[(Int, Double, DenseVector[Double], DenseMatrix[Double])], DenseMatrix[Double], Double) = {
+  (Array[(Int, Double, DenseVector[Double], DenseMatrix[Double])], DenseMatrix[Double], Double) = {
 
     val gamma_nk = new DenseMatrix(points.length, clusters.length,
       (for (c <- clusters)
-     yield gaussian(points, c._2, c._3, c._4)).flatMap(_.toList))
+        yield gaussian(points, c._2, c._3, c._4)).flatMap(_.toList))
 
     val totals = sum(gamma_nk(*, ::))
     val gamma_nk_norm = DenseMatrix(
       (for (i <- 0 until gamma_nk.cols)
-      yield gamma_nk(::, i) / totals) :_*)
+        yield gamma_nk(::, i) / totals) :_*)
 
     val newClusters = for (c <- clusters) yield
     {
@@ -48,7 +48,7 @@ object SequentialGMM {
       val newPi = N_k / N
       val mu_k = points.zipWithIndex.map{
         case (p, id) => (p._1 * gammaRow(id) , p._2 * gammaRow(id))
-        }.reduce(addPoints)
+      }.reduce(addPoints)
       val newMu = DenseVector(Array(mu_k._1 / N_k, mu_k._2 / N_k))
       val newDiffGamma = new DenseMatrix(2, points.length, points.zipWithIndex.map{
         case (p, id) =>
@@ -87,7 +87,7 @@ object SequentialGMM {
 
     //    val points = minmax(Array((0.05, 1.413), (0.85, -0.3), (11.1, 0.4), (0.27, 0.12), (88, 12.33)))
     val kPoints = seed.shuffle(points.toList).take(K).toArray
-//    val kPoints = points.take(K)
+    //    val kPoints = points.take(K)
 
     var clusters : Array[(Int, Double, DenseVector[Double], DenseMatrix[Double])]= kPoints.zipWithIndex.map {
       case (k_p, id) => Tuple4(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
@@ -104,8 +104,8 @@ object SequentialGMM {
 
       val (newClusters, gammaNK, likelihood) = expMaxStep(points, clusters)
       clusters = newClusters
-//      tempDist = math.abs(likelihood - oldLikelihood)
-//      println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood + ", Difference: " + tempDist)
+      //      tempDist = math.abs(likelihood - oldLikelihood)
+      //      println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood + ", Difference: " + tempDist)
       println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood)
       iter = iter + 1
       oldLikelihood = likelihood
@@ -119,7 +119,7 @@ object SequentialGMM {
     println()
     println("Final center points :")
     clusters.map(_._3).map(p => ((p(0) * (scaleX._2 - scaleX._1)) + scaleX._1, (p(1) * (scaleY._2 - scaleY._1)) + scaleY._1)).sortWith(_._1 < _._1).foreach(println)
-//    clusters.map(_._4).foreach(println)
+    //    clusters.map(_._4).foreach(println)
   }
 }
 
