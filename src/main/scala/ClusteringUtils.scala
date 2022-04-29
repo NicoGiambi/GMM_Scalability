@@ -55,7 +55,7 @@ object ClusteringUtils {
   }
 
   def getHyperparameters (): (Int, Double, Random) = {
-    val maxIter = 0
+    val maxIter = 100
     val tolerance = 0
     val randomSeed = new Random(42)
     (maxIter, tolerance, randomSeed)
