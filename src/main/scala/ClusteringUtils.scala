@@ -1,8 +1,11 @@
 import breeze.linalg.{DenseMatrix, DenseVector, det, inv, sum}
+import org.apache.spark.rdd.RDD
+import org.apache.spark.mllib.linalg.{Matrix, Matrices}
 
 import scala.io.Source
 import scala.math.pow
 import scala.util.Random
+
 
 class Cluster(val id: Int, val pi: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) {
   def gaussian(points: Array[(Double, Double)]): Array[Double] = {
@@ -10,6 +13,21 @@ class Cluster(val id: Int, val pi: Double, val center: DenseVector[Double], val 
     val pi = math.Pi
     val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
     val dot = diff.t * inv(covariance)
+
+    // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
+    val diag = for (i <- 0 until diff.cols)
+      yield dot(i, ::) * diff(::, i)
+    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi).toArray
+
+    gauss
+  }
+
+  def gaussianRDD(points: RDD[(Double, Double)], length: Int): Int = {
+    val diff = new DenseMatrix(2, length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
+    val pi = math.Pi
+    val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
+    val dot = diff.t * inv(covariance)
+
     // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
     val diag = for (i <- 0 until diff.cols)
       yield dot(i, ::) * diff(::, i)
@@ -58,7 +76,7 @@ object ClusteringUtils {
   }
 
   def getHyperparameters (): (Int, Double, Random) = {
-    val maxIter = 10
+    val maxIter = 300
     val tolerance = 1e-4
     val randomSeed = new Random(42)
     (maxIter, tolerance, randomSeed)
@@ -110,8 +128,8 @@ object ClusteringUtils {
     val yMax = flatY.max
     val scaledY = flatY.map(p => (p - yMin) / (yMax - yMin))
 
-    val scaledPoints = for (i <- points.indices) yield (scaledX(i), scaledY(i))
-    ((xMin, xMax), (yMin, yMax), scaledPoints.toArray)
+    val scaledPoints = scaledX zip scaledY
+    ((xMin, xMax), (yMin, yMax), scaledPoints)
   }
 
 }
