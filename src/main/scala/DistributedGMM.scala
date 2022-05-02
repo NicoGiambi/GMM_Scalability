@@ -1,7 +1,7 @@
 import ClusteringUtils._
 import org.apache.log4j.{Level, Logger}
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.mllib.linalg.{DenseMatrix, DenseVector, Matrices, Matrix, SparseVector, Vector, Vectors}
+import org.apache.spark.mllib.linalg.{DenseMatrix, DenseVector, Vector, Vectors}
 import org.apache.spark.rdd.RDD
 
 import scala.math.pow
