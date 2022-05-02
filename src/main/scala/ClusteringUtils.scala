@@ -1,6 +1,4 @@
-import breeze.linalg.{DenseMatrix, DenseVector, det, inv, sum}
-import org.apache.spark.rdd.RDD
-import org.apache.spark.mllib.linalg.{Matrix, Matrices}
+import breeze.linalg.{*, DenseMatrix, DenseVector, det, inv, sum}
 
 import scala.io.Source
 import scala.math.pow
@@ -8,52 +6,67 @@ import scala.util.Random
 
 
 class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) {
-  def gaussian(points: Array[(Double, Double)]): Array[Double] = {
-    val diff = new DenseMatrix(2, points.length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
+
+  def computeDiagonalPar(diff: DenseMatrix[Double], dot: DenseMatrix[Double], g1: Double): Array[Double] = {
+    val diag = for (i <- (0 until diff.cols).par)
+      yield dot(i, ::) * diff(::, i)
+    diag.par.map(el => g1 * math.exp(-0.5 * el) * pi_k).toArray
+  }
+
+  def computeDiagonal(diff: DenseMatrix[Double], dot: DenseMatrix[Double], g1: Double): Array[Double] = {
+    val diag = for (i <- 0 until diff.cols)
+      yield dot(i, ::) * diff(::, i)
+    diag.map(el => g1 * math.exp(-0.5 * el) * pi_k).toArray
+  }
+
+  def gaussian(points: DenseMatrix[Double], isParallel: Boolean): Array[Double] = {
+    val diff = points.copy
+    diff(0, ::) :-= center(0)
+    diff(1, ::) :-= center(1)
+
+//    val duration7 = (System.nanoTime - startTime7) / 1e9d
+//    println("diff_gauss: " + duration7)
     val pi = math.Pi
     val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
     val dot = diff.t * inv(covariance)
 
     // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
-    val diag = for (i <- 0 until diff.cols)
-      yield dot(i, ::) * diff(::, i)
-    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi_k).toArray
-
-    gauss
+    if (isParallel)
+      computeDiagonalPar(diff, dot, g1)
+    else
+      computeDiagonal(diff, dot, g1)
   }
 
-//  def gaussianRDD(points: RDD[(Double, Double)], length: Int): Int = {
-//    val diff = new DenseMatrix(2, length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
-//    val pi = math.Pi
-//    val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
-//    val dot = diff.t * inv(covariance)
-//
-//    // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
-//    val diag = for (i <- 0 until diff.cols)
-//      yield dot(i, ::) * diff(::, i)
-//    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi).toArray
-//
-//    gauss
-//  }
-
-  def maximizationStep(points: Array[(Double, Double)], gamma_nk_norm: DenseMatrix[Double]): Array[Cluster] ={
-    val N = points.length
+  def maximizationStep(points: DenseMatrix[Double], gamma_nk_norm: DenseMatrix[Double]): Array[Cluster] ={
+    val N = points.cols
     val gammaRow = gamma_nk_norm(id, ::)
     val N_k = sum(gammaRow)
     val newPi = N_k / N
-    val mu_k = points.zipWithIndex.map {
-      case (p, id) => (p._1 * gammaRow(id), p._2 * gammaRow(id))
-    }.reduce(ClusteringUtils.addPoints)
-    val newMu = DenseVector(Array(mu_k._1 / N_k, mu_k._2 / N_k))
 
-    val newDiffGamma = new DenseMatrix(2, points.length, points.zipWithIndex.map {
-      case (p, id) =>
-        (gammaRow(id) * (p._1 - newMu(0)), gammaRow(id) * (p._2 - newMu(1)))
-    }.flatMap(a => List(a._1, a._2)))
+//    val startTime4 = System.nanoTime
 
-    val newDiff = new DenseMatrix(2, points.length, points.map(
-      p => (p._1 - newMu(0), p._2 - newMu(1))
-    ).flatMap(a => List(a._1, a._2))).t
+    val weightedPoints = points.copy
+    weightedPoints(0, ::) :*= gammaRow / N_k
+    weightedPoints(1, ::) :*= gammaRow / N_k
+
+    val newMu = DenseVector(sum(weightedPoints(*, ::)).toArray)
+
+//    val duration4 = (System.nanoTime - startTime4) / 1e9d
+//    println("mu_k: " + duration4)
+
+//    val startTime5 = System.nanoTime
+
+    val newDiffGamma = points.copy
+    newDiffGamma(0, ::) :-= newMu(0)
+    newDiffGamma(1, ::) :-= newMu(1)
+
+    val newDiff = newDiffGamma.copy.t
+
+    newDiffGamma(0, ::) :*= gammaRow
+    newDiffGamma(1, ::) :*= gammaRow
+
+//    val duration5 = (System.nanoTime - startTime5) / 1e9d
+//    println("new_diff: " + duration5)
 
     val newCov = (newDiffGamma * newDiff) / N_k
 

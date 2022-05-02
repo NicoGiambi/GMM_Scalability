@@ -1,7 +1,5 @@
-import breeze.linalg.DenseVector
-import breeze.linalg.DenseMatrix
-import breeze.linalg._
 import ClusteringUtils._
+import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
 
 import scala.annotation.tailrec
@@ -9,21 +7,27 @@ import scala.annotation.tailrec
 
 object SequentialGMM {
 
-  def expMaxStep (points: Array[(Double, Double)], clusters : Array[Cluster]):
-                 (Array[Cluster], DenseMatrix[Double], Double) = {
+  def expMaxStep (points: DenseMatrix[Double], clusters : Array[Cluster]):
+  (Array[Cluster], DenseMatrix[Double], Double) = {
 
     // Expectation step
-    val gamma_nk = new DenseMatrix(points.length,
-                                   clusters.length,
-                                   clusters.flatMap(_.gaussian(points)))
+    val gamma_nk = DenseMatrix.zeros[Double](points.cols, clusters.length)
+
+    for (i <- 0 until gamma_nk.cols) {
+      gamma_nk(::, i) := DenseVector(clusters(i).gaussian(points, isParallel = false))
+    }
 
     val totals = sum(gamma_nk(*, ::))
     val gamma_nk_norm = DenseMatrix(
       (for (i <- 0 until gamma_nk.cols)
-        yield gamma_nk(::, i) / totals): _*)
+        yield gamma_nk(::, i) / totals) :_*)
+
 
     // Maximization step
-    val newClusters = clusters.flatMap(_.maximizationStep(points, gamma_nk_norm))
+    val newClusters = new Array[Cluster](clusters.length)
+    for (i <- clusters.indices) {
+      newClusters(i) = clusters(i).maximizationStep(points, gamma_nk_norm)(0)
+    }
 
     val sampleLikelihood = log(totals)
     val likelihood = sum(sampleLikelihood)
@@ -56,6 +60,8 @@ object SequentialGMM {
       case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
     }
 
+    val pointsM = new DenseMatrix(2, points.length, points.flatMap(a => List(a._1, a._2)))
+
     println("Starting Centroids: ")
     printCentroids(clusters, scaleX, scaleY)
 
@@ -84,7 +90,7 @@ object SequentialGMM {
       }
       else {
         // training step
-        val (newClusters, gammaNK, likelihood) = expMaxStep(points, currentClusters)
+        val (newClusters, gammaNK, likelihood) = expMaxStep(pointsM, currentClusters)
         println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood)
         training(iter + 1, likelihood, newClusters)
       }
@@ -103,22 +109,11 @@ object SequentialGMM {
 // [ 65.38825768 119.80146389]
 // [249.64211625 226.74700378]]
 
-// Scala GMM cluster centers
-//-----------------------------
-// Duration: 1664.1321194
-//-----------------------------
-//(9.933946207734696,13.70182011905065)
-//(22.940796982540448,28.244988984963488)
-//(44.761694262831774,52.41992124688973)
-//(90.3236292546855,103.52162824790214)
-//(230.21380838793382,214.16115834720713)
-
-// Scala Parallel GMM cluster centers
-//-----------------------------
-// Duration: 1301.3916283
-//-----------------------------
-//(9.933946207734696,13.70182011905065)
-//(22.940796982540448,28.244988984963488)
-//(44.761694262831774,52.41992124688973)
-//(90.3236292546855,103.52162824790214)
-//(230.21380838793382,214.16115834720713)
+//Sequential GMM duration: 128.7709262
+//
+//Final center points:
+//(11.300370175749158,15.273624932129978)
+//(30.362547807896675,36.04434976921901)
+//(60.72740631795588,124.44528524103906)
+//(89.04657671648589,73.37369255558528)
+//(242.03559485753297,219.53205201237546)
