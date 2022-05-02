@@ -7,7 +7,7 @@ import scala.math.pow
 import scala.util.Random
 
 
-class Cluster(val id: Int, val pi: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) {
+class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) {
   def gaussian(points: Array[(Double, Double)]): Array[Double] = {
     val diff = new DenseMatrix(2, points.length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
     val pi = math.Pi
@@ -17,24 +17,24 @@ class Cluster(val id: Int, val pi: Double, val center: DenseVector[Double], val 
     // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
     val diag = for (i <- 0 until diff.cols)
       yield dot(i, ::) * diff(::, i)
-    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi).toArray
+    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi_k).toArray
 
     gauss
   }
 
-  def gaussianRDD(points: RDD[(Double, Double)], length: Int): Int = {
-    val diff = new DenseMatrix(2, length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
-    val pi = math.Pi
-    val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
-    val dot = diff.t * inv(covariance)
-
-    // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
-    val diag = for (i <- 0 until diff.cols)
-      yield dot(i, ::) * diff(::, i)
-    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi).toArray
-
-    gauss
-  }
+//  def gaussianRDD(points: RDD[(Double, Double)], length: Int): Int = {
+//    val diff = new DenseMatrix(2, length, points.map(p => (p._1 - center(0), p._2 - center(1))).flatMap(a => List(a._1, a._2)))
+//    val pi = math.Pi
+//    val g1 = 1 / (pow(2 * pi, center.length / 2) * math.sqrt(det(covariance)))
+//    val dot = diff.t * inv(covariance)
+//
+//    // Non standard gaussian computation. The standard way needs too much memory, so we optimized it to run locally
+//    val diag = for (i <- 0 until diff.cols)
+//      yield dot(i, ::) * diff(::, i)
+//    val gauss = diag.map(el => g1 * math.exp(-0.5 * el) * pi).toArray
+//
+//    gauss
+//  }
 
   def maximizationStep(points: Array[(Double, Double)], gamma_nk_norm: DenseMatrix[Double]): Array[Cluster] ={
     val N = points.length
@@ -76,7 +76,7 @@ object ClusteringUtils {
   }
 
   def getHyperparameters (): (Int, Double, Random) = {
-    val maxIter = 300
+    val maxIter = 100
     val tolerance = 1e-4
     val randomSeed = new Random(42)
     (maxIter, tolerance, randomSeed)
