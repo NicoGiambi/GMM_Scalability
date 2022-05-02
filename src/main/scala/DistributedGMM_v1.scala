@@ -10,7 +10,7 @@ import org.apache.spark.rdd.RDD
 import scala.math.pow
 
 
-object DistributedGMM {
+object DistributedGMM_v1 {
 
   def det(matrix: DenseMatrix): Double = {
     matrix(0,0) * matrix(1,1) - matrix(0,1) * matrix(1,0)
