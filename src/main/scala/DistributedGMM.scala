@@ -3,10 +3,12 @@ import breeze.linalg.DenseMatrix
 import breeze.linalg._
 import ClusteringUtils._
 import breeze.numerics.log
-import org.apache.spark.SparkContext
-import org.apache.spark.SparkConf
-import org.apache.spark.rdd.RDD
 import scala.annotation.tailrec
+import org.apache.log4j.{Level, Logger}
+import org.apache.spark.mllib.linalg.{DenseMatrix, DenseVector, Vector, Vectors}
+import org.apache.spark.rdd.RDD
+import org.apache.spark.{SparkConf, SparkContext}
+
 
 
 
