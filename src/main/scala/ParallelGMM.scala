@@ -1,29 +1,33 @@
-import breeze.linalg.DenseVector
-import breeze.linalg.DenseMatrix
-import breeze.linalg._
 import ClusteringUtils._
+import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
 
 import scala.annotation.tailrec
 
 
-object SequentialGMM {
+object ParallelGMM {
 
   def expMaxStep (points: Array[(Double, Double)], clusters : Array[Cluster]):
                  (Array[Cluster], DenseMatrix[Double], Double) = {
 
     // Expectation step
-    val gamma_nk = new DenseMatrix(points.length,
-                                   clusters.length,
-                                   clusters.flatMap(_.gaussian(points)))
+    // parallelize on columns, i.e. on clusters
+    val gamma_nk = DenseMatrix.zeros[Double](points.length, clusters.length)
+
+    for (i <- (0 until gamma_nk.cols).par) {
+      gamma_nk(::, i) := DenseVector(clusters(i).gaussian(points))
+    }
 
     val totals = sum(gamma_nk(*, ::))
     val gamma_nk_norm = DenseMatrix(
-      (for (i <- 0 until gamma_nk.cols)
-        yield gamma_nk(::, i) / totals): _*)
+      (for (i <- (0 until gamma_nk.cols).par)
+        yield gamma_nk(::, i) / totals).toIndexedSeq :_*)
 
     // Maximization step
-    val newClusters = clusters.flatMap(_.maximizationStep(points, gamma_nk_norm))
+    val newClusters = new Array[Cluster](clusters.length)
+    for (i <- clusters.indices.par) {
+      newClusters(i) = clusters(i).maximizationStep(points, gamma_nk_norm)(0)
+    }
 
     val sampleLikelihood = log(totals)
     val likelihood = sum(sampleLikelihood)
@@ -105,20 +109,10 @@ object SequentialGMM {
 
 // Scala GMM cluster centers
 //-----------------------------
-// Duration: 1664.1321194
+// Duration:
 //-----------------------------
-//(9.933946207734696,13.70182011905065)
-//(22.940796982540448,28.244988984963488)
-//(44.761694262831774,52.41992124688973)
-//(90.3236292546855,103.52162824790214)
-//(230.21380838793382,214.16115834720713)
-
-// Scala Parallel GMM cluster centers
-//-----------------------------
-// Duration: 1301.3916283
-//-----------------------------
-//(9.933946207734696,13.70182011905065)
-//(22.940796982540448,28.244988984963488)
-//(44.761694262831774,52.41992124688973)
-//(90.3236292546855,103.52162824790214)
-//(230.21380838793382,214.16115834720713)
+//[[ 32.46567393  38.872867  ]
+// [101.06939461  76.44165517]
+// [ 11.99569006  16.10913821]
+// [ 65.38825768 119.80146389]
+// [249.64211625 226.74700378]]
