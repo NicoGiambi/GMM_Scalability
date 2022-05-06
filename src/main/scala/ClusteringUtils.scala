@@ -5,7 +5,7 @@ import scala.math.pow
 import scala.util.Random
 
 
-class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) {
+class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], val covariance: DenseMatrix[Double]) extends Serializable {
 
   def computeDiagonalPar(diff: DenseMatrix[Double], dot: DenseMatrix[Double], g1: Double): Array[Double] = {
     val diag = for (i <- (0 until diff.cols).par)
@@ -89,7 +89,7 @@ object ClusteringUtils {
   }
 
   def getHyperparameters (): (Int, Double, Random) = {
-    val maxIter = 100
+    val maxIter = 5
     val tolerance = 1e-4
     val randomSeed = new Random(42)
     (maxIter, tolerance, randomSeed)
@@ -146,3 +146,9 @@ object ClusteringUtils {
   }
 
 }
+
+//50.033891
+//2478432.5289092916
+
+//66.1540921
+//2478432.5289092916

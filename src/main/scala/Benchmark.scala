@@ -1,5 +1,5 @@
 import ClusteringUtils._
-import breeze.linalg.{DenseMatrix, DenseVector}
+import breeze.linalg.{DenseMatrix, DenseVector, scale}
 import org.apache.spark.mllib.stat.distribution.MultivariateGaussian
 import org.apache.spark.mllib.clustering.KMeansModel
 import org.apache.spark.{SparkConf, SparkContext}
@@ -19,7 +19,16 @@ import scala.util.Random
 
 object Benchmark {
 
-  def fitSave(model: String, sc: SparkContext, clusters: Int, outPath: String, parsedData: RDD[Vector], maxIter: Int, tolerance: Double, kPoints: Array[(Double, Double)]): Int = {
+  def fitSave(model: String,
+              outPath: String,
+              sc: SparkContext,
+              parsedData: RDD[Vector],
+              kPoints: Array[(Double, Double)],
+              clusters: Int,
+              maxIter: Int,
+              tolerance: Double,
+              scaleX: (Double, Double),
+              scaleY: (Double, Double)): Int = {
 
     val t1 = System.nanoTime
 
@@ -37,7 +46,12 @@ object Benchmark {
       }
       val initModel = new GaussianMixtureModel(weights = mvWeights.toArray, gaussians = mvGaussians)
       println("Starting Centroids: ")
-      initModel.gaussians.map(_.mu).sortWith(_(0) < _(0)).foreach(println)
+      initModel
+        .gaussians
+        .map(_.mu)
+        .map(p => ((p(0) * (scaleX._2 - scaleX._1)) + scaleX._1, (p(1) * (scaleY._2 - scaleY._1)) + scaleY._1))
+        .sortWith(_._1 < _._1)
+        .foreach(println)
       // initModel.gaussians.map(_.sigma).foreach(println)
       val est = new GaussianMixture().setK(clusters).setMaxIterations(maxIter).setConvergenceTol(tolerance).run(parsedData)
       if (!Files.exists(Paths.get(outPath)))
@@ -71,18 +85,31 @@ object Benchmark {
 
     val outPath = "model/" + model + "/"
 
-    val filename = "datasets/dataset_" + args(3) + ".txt"
+    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
+    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
 
     val (maxIter, tolerance, seed) = getHyperparameters()
 
     val points = import_files(filename)
+    val scales = import_files(scalesFilename)
     val data = sc.textFile(filename)
     val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
+    val scaleX = scales(0)
+    val scaleY = scales(1)
 
     val kPoints = seed.shuffle(points.toList).take(clusters).toArray
 
     println("Fitting with " + args(0) + " on " + args(1) + " model with " + args(2) + " clusters and augmentation set to " + args(3))
-    fitSave(model, sc, clusters, outPath, parsedData, maxIter, tolerance, kPoints)
+    fitSave(model=model,
+            outPath=outPath,
+            sc=sc,
+            clusters=clusters,
+            maxIter=maxIter,
+            parsedData=parsedData,
+            kPoints=kPoints,
+            tolerance=tolerance,
+            scaleX=scaleX,
+            scaleY=scaleY)
 
     println()
     println("------------------------------------")
@@ -102,7 +129,12 @@ object Benchmark {
       val preds = estimator.predict(parsedData)
       if (!Files.exists(Paths.get(outPath + "/predictions")))
         preds.saveAsTextFile(outPath + "/predictions")
-      estimator.gaussians.map(_.mu).sortWith(_ (0) < _ (0)).foreach(println)
+      estimator
+        .gaussians
+        .map(_.mu)
+        .map(p => ((p(0) * (scaleX._2 - scaleX._1)) + scaleX._1, (p(1) * (scaleY._2 - scaleY._1)) + scaleY._1))
+        .sortWith(_._1 < _._1)
+        .foreach(println)
     }
 
     sc.stop()
