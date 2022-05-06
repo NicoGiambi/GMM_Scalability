@@ -1,6 +1,7 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
+import org.apache.spark.mllib.linalg.Vectors
 import org.apache.spark.rdd.RDD
 
 import scala.annotation.tailrec
@@ -15,7 +16,7 @@ object DistributedGMM {
     val K = clusters.count().toInt
     // Expectation step
     // distribute on columns, i.e. on clusters
-    val gaussians = clusters.map(_.gaussian(points, isParallel = true))
+    val gaussians = clusters.map(_.gaussian(points, isParallel = false))
     val gamma_nk = new DenseMatrix(points.cols, K, gaussians.flatMap(a => a).collect())
     val totals = sum(gamma_nk(*, ::))
     val gaussians_norm = gaussians.flatMap(diag => (DenseVector(diag) / totals).toArray)
@@ -41,11 +42,17 @@ object DistributedGMM {
     val K = args(2).toInt
 
     // file with anchors sizes
-    val filename = "datasets/dataset_" + args(3) + ".txt"
+    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
+    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
+
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    // scale anchors dimension in range [0, 1]
-    val (scaleX, scaleY, points) = minmax(import_files(filename))
+    val points = import_files(filename)
+    val scales = import_files(scalesFilename)
+    val data = sc.textFile(filename)
+    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
+    val scaleX = scales(0)
+    val scaleY = scales(1)
 
     println("Number of points:")
     println(points.length)
@@ -59,10 +66,10 @@ object DistributedGMM {
       case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
     })
 
-    val pointsM = new DenseMatrix(2, points.length, points.par.flatMap(a => List(a._1, a._2)).toArray)
+    val pointsM = new DenseMatrix(2, points.length, parsedData.flatMap(a => List(a(0), a(1))).collect())
 
     println("Starting Centroids: ")
-//    printCentroids(clusters.collect(), scaleX, scaleY)
+    printCentroids(clusters.collect(), scaleX, scaleY)
 
     // use maxIter as stopping criteria
     val oldLikelihood = 0.0
@@ -78,7 +85,7 @@ object DistributedGMM {
 
         println()
         println("Final center points:")
-//        printCentroids(currentClusters.collect(), scaleX, scaleY)
+        printCentroids(currentClusters.collect(), scaleX, scaleY)
 
         println("Iterations:")
         println(iter)
