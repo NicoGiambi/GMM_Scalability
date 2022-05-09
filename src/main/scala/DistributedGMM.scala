@@ -16,14 +16,42 @@ object DistributedGMM {
     val K = clusters.count().toInt
     // Expectation step
     // distribute on columns, i.e. on clusters
-    val gaussians = clusters.map(_.gaussian(points, isParallel = false))
-    val gamma_nk = new DenseMatrix(points.cols, K, gaussians.flatMap(a => a).collect())
+
+    val startTime5 = System.nanoTime
+
+    val gaussians = clusters.map(a => a.gaussian(points, isParallel = false)).collect()
+
+    val duration5 = (System.nanoTime - startTime5) / 1e9d
+    println("gaussians: " + duration5)
+
+    val startTime0 = System.nanoTime
+
+    val gamma_nk = new DenseMatrix(points.cols, K, gaussians.flatten)
     val totals = sum(gamma_nk(*, ::))
+
+    val duration0 = (System.nanoTime - startTime0) / 1e9d
+    println("gamma_nk: " + duration0)
+
+
+
+    val startTime2 = System.nanoTime
+
     val gaussians_norm = gaussians.flatMap(diag => (DenseVector(diag) / totals).toArray)
-    val gamma_nk_norm = new DenseMatrix(points.cols, K, gaussians_norm.collect()).t
+    val gamma_nk_norm = new DenseMatrix(points.cols, K, gaussians_norm).t
+
+    val duration2 = (System.nanoTime - startTime2) / 1e9d
+    println("normalization: " + duration2)
+
+
+
+    val startTime1 = System.nanoTime
 
     // Maximization step
     val newClusters = clusters.map(_.maximizationStep(points, gamma_nk_norm)(0))
+
+    val duration1 = (System.nanoTime - startTime1) / 1e9d
+    println("maximization_step: " + duration1)
+
 
 
     val sampleLikelihood = log(totals)
@@ -49,8 +77,8 @@ object DistributedGMM {
 
     val points = import_files(filename)
     val scales = import_files(scalesFilename)
-    val data = sc.textFile(filename)
-    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
+    val data = sc.parallelize(points)
+    val parsedData = data.map(s => Vectors.dense(Array(s._1, s._2))).cache()
     val scaleX = scales(0)
     val scaleY = scales(1)
 

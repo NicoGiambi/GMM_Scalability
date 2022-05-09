@@ -1,6 +1,7 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
+import org.apache.spark.mllib.linalg.Vectors
 
 import scala.annotation.tailrec
 
@@ -41,12 +42,15 @@ object ParallelGMM {
     // number of clusters
     val K = args(2).toInt
 
-    // file with anchors sizes
-    val filename = "datasets/dataset_" + args(3) + ".txt"
+    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
+    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
+
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    // scale anchors dimension in range [0, 1]
-    val (scaleX, scaleY, points) = minmax(import_files(filename))
+    val points = import_files(filename)
+    val scales = import_files(scalesFilename)
+    val scaleX = scales(0)
+    val scaleY = scales(1)
 
     println("Number of points:")
     println(points.length)
