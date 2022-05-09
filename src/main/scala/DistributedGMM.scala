@@ -7,13 +7,14 @@ import org.apache.spark.rdd.RDD
 import scala.annotation.tailrec
 import org.apache.spark.{SparkConf, SparkContext}
 
+import java.lang.management.GarbageCollectorMXBean
+
 
 object DistributedGMM {
 
-  def expMaxStep (sc: SparkContext, points: DenseMatrix[Double], clusters : RDD[Cluster]):
-  (RDD[Cluster], DenseMatrix[Double], Double) = {
+  def expMaxStep (sc: SparkContext, points: DenseMatrix[Double], clusters : RDD[Cluster], K : Int):
+  (RDD[Cluster], Double) = {
 
-    val K = clusters.count().toInt
     // Expectation step
     // distribute on columns, i.e. on clusters
 
@@ -32,8 +33,6 @@ object DistributedGMM {
     val duration0 = (System.nanoTime - startTime0) / 1e9d
     println("gamma_nk: " + duration0)
 
-
-
     val startTime2 = System.nanoTime
 
     val gaussians_norm = gaussians.flatMap(diag => (DenseVector(diag) / totals).toArray)
@@ -47,23 +46,23 @@ object DistributedGMM {
     val startTime1 = System.nanoTime
 
     // Maximization step
-    val newClusters = clusters.map(_.maximizationStep(points, gamma_nk_norm)(0))
+    val newClusters = clusters.map(_.maximizationStep(points, gamma_nk_norm))
 
     val duration1 = (System.nanoTime - startTime1) / 1e9d
     println("maximization_step: " + duration1)
 
-
-
     val sampleLikelihood = log(totals)
     val likelihood = sum(sampleLikelihood)
 
-    (newClusters, gamma_nk_norm, likelihood)
+    (newClusters, likelihood)
   }
 
 
   def main(args: Array[String]): Unit = {
 
     val conf = new SparkConf().setAppName("DistributedGMM").setMaster(args(0))
+    conf.set("spark.driver.memory", "4g")
+    conf.set("spark.executor.memory", "4g")
     val sc = new SparkContext(conf)
 
     // number of clusters
@@ -75,63 +74,95 @@ object DistributedGMM {
 
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    val points = import_files(filename)
+//    val points = import_files(filename)
+//    val scales = import_files(scalesFilename)
+//    val data = sc.parallelize(points)
+//    val parsedData = data.map(s => Vectors.dense(Array(s._1, s._2))).cache()
+
     val scales = import_files(scalesFilename)
-    val data = sc.parallelize(points)
-    val parsedData = data.map(s => Vectors.dense(Array(s._1, s._2))).cache()
+    val data = sc.textFile(filename)
+    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
+//    val points = parsedData.collect().map(p => (p(0), p(1)))
+
     val scaleX = scales(0)
     val scaleY = scales(1)
 
     println("Number of points:")
-    println(points.length)
+//    println(points.length)
+    println(parsedData.count())
 
     // take 5 random points as initial clusters' center
-    val kPoints = seed.shuffle(points.toList).take(K).toArray
+//    val kPoints = seed.shuffle(points.toList).take(K).toArray
+    val kPoints = parsedData.takeSample(false, K, 42)
 
     val startTime = System.nanoTime
 
-    val clusters : RDD[Cluster] = sc.parallelize(kPoints.zipWithIndex.map{
-      case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
-    })
+    var clusters : RDD[Cluster] = sc.parallelize(kPoints.zipWithIndex.map{
+      case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p(0), k_p(1))), DenseMatrix.eye[Double](2))
+    }).cache()
 
-    val pointsM = new DenseMatrix(2, points.length, parsedData.flatMap(a => List(a(0), a(1))).collect())
+    val pointsM = new DenseMatrix(2, parsedData.count().toInt, parsedData.flatMap(a => List(a(0), a(1))).collect())
 
     println("Starting Centroids: ")
     printCentroids(clusters.collect(), scaleX, scaleY)
 
     // use maxIter as stopping criteria
     val oldLikelihood = 0.0
+    var iter = 0
+    var likelihood = 0.0
+    var gaussians = new Array[Array[Double]](0)
+    var gamma_nk = DenseMatrix.zeros[Double](1,1)
+    var totals = DenseVector[Double](0)
+    var gaussians_norm = new Array[Double](0)
+    var gamma_nk_norm = DenseMatrix.zeros[Double](1,1)
 
-    @tailrec
-    def training(iter: Int, currentLikelihood: Double, currentClusters: RDD[Cluster]): Unit ={
-      if (iter >= maxIter) {
-        // when training finishes, display duration time and clusters centroids
-        val duration = (System.nanoTime - startTime) / 1e9d
-        println()
-        println("Sequential GMM duration:")
-        println(duration)
+    while (iter < maxIter) {
+      // training step
+//      val res = expMaxStep(sc, pointsM, clusters, K)
+//      clusters = res._1
+//      likelihood = res._2
 
-        println()
-        println("Final center points:")
-        printCentroids(currentClusters.collect(), scaleX, scaleY)
+      val startTime = System.nanoTime
 
-        println("Iterations:")
-        println(iter)
+      gaussians = clusters.map(a => a.gaussian(pointsM, isParallel = false)).collect()
 
-        println("Likelihood:")
-        println(currentLikelihood)
+      val duration = (System.nanoTime - startTime) / 1e9d
+      println("gaussians: " + duration)
 
-      }
-      else {
-        // training step
-        val (newClusters, gammaNK, likelihood) = expMaxStep(sc, pointsM, currentClusters)
-        println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood)
-        training(iter + 1, likelihood, newClusters)
-      }
+      gamma_nk = new DenseMatrix(pointsM.cols, K, gaussians.flatten)
+      totals = sum(gamma_nk(*, ::))
+
+      gaussians_norm = gaussians.flatMap(diag => (DenseVector(diag) / totals).toArray)
+      gamma_nk_norm = new DenseMatrix(pointsM.cols, K, gaussians_norm).t
+
+      // Maximization step
+      clusters = clusters.map(_.maximizationStep(pointsM, gamma_nk_norm))
+      clusters.persist()
+
+      val sampleLikelihood = log(totals)
+      likelihood = sum(sampleLikelihood)
+
+      System.gc()
+
+      println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood)
+      iter += 1
     }
 
-    training(0, oldLikelihood, clusters)
+    // when training finishes, display duration time and clusters centroids
+    val duration = (System.nanoTime - startTime) / 1e9d
+    println()
+    println("Sequential GMM duration:")
+    println(duration)
 
+    println()
+    println("Final center points:")
+    printCentroids(clusters.collect(), scaleX, scaleY)
+
+    println("Iterations:")
+    println(iter)
+
+    println("Likelihood:")
+    println(likelihood)
   }
 }
 

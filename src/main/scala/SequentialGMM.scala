@@ -26,7 +26,7 @@ object SequentialGMM {
     // Maximization step
     val newClusters = new Array[Cluster](clusters.length)
     for (i <- clusters.indices) {
-      newClusters(i) = clusters(i).maximizationStep(points, gamma_nk_norm)(0)
+      newClusters(i) = clusters(i).maximizationStep(points, gamma_nk_norm)
     }
 
     val sampleLikelihood = log(totals)

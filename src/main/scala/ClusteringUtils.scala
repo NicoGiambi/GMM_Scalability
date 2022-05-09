@@ -37,7 +37,7 @@ class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], va
       computeDiagonal(diff, dot, g1)
   }
 
-  def maximizationStep(points: DenseMatrix[Double], gamma_nk_norm: DenseMatrix[Double]): Array[Cluster] ={
+  def maximizationStep(points: DenseMatrix[Double], gamma_nk_norm: DenseMatrix[Double]): Cluster ={
     val N = points.cols
     val gammaRow = gamma_nk_norm(id, ::)
     val N_k = sum(gammaRow)
@@ -70,7 +70,7 @@ class Cluster(val id: Int, val pi_k: Double, val center: DenseVector[Double], va
 
     val newCov = (newDiffGamma * newDiff) / N_k
 
-    val newCluster = Array(new Cluster(id, newPi, newMu, newCov))
+    val newCluster = new Cluster(id, newPi, newMu, newCov)
 
     newCluster
   }
@@ -82,10 +82,10 @@ object ClusteringUtils {
     val lines = Source.fromFile(path)
     val linesList = lines.getLines.toArray
     lines.close
-    val couples = linesList.map(_.split(" +") match {
+    val couples = linesList.par.map(_.split(" +") match {
       case Array(s1, s2) => (s1.toDouble, s2.toDouble)
     })
-    couples
+    couples.toArray
   }
 
   def getHyperparameters (): (Int, Double, Random) = {
