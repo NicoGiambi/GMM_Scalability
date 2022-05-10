@@ -48,7 +48,7 @@ object SequentialKmeans {
     val K = args(2).toInt
 
     // The device status data file(s)
-    val filename = "datasets/dataset_" + args(3) + ".txt"
+    val filename = "../../../datasets/dataset_" + args(3) + "_scaled.txt"
 
     // ConvergeDist -- the threshold "distance" between iterations at which we decide we are done
 //    val convergeDist = 1e-4

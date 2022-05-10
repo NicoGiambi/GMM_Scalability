@@ -36,13 +36,13 @@ object SequentialGMM {
   }
 
 
-  def main(args: Array[String]): Unit = {
+  def run(args: Array[String]): Unit = {
 
     // number of clusters
     val K = args(2).toInt
 
-    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
-    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
+    val filename = "../../../datasets/dataset_" + args(3) + "_scaled.txt"
+    val scalesFilename = "../../../datasets/scales_" + args(3) + ".txt"
 
     val (maxIter, tolerance, seed) = getHyperparameters()
 
@@ -102,21 +102,10 @@ object SequentialGMM {
     training(0, oldLikelihood, clusters)
 
   }
+
+  def main(args: Array[String]): Unit = {
+    run(args)
+  }
+
 }
 
-// Python GMM cluster centers
-//-----------------------------
-//[[ 32.46567393  38.872867  ]
-// [101.06939461  76.44165517]
-// [ 11.99569006  16.10913821]
-// [ 65.38825768 119.80146389]
-// [249.64211625 226.74700378]]
-
-//Sequential GMM duration: 128.7709262
-//
-//Final center points:
-//(11.300370175749158,15.273624932129978)
-//(30.362547807896675,36.04434976921901)
-//(60.72740631795588,124.44528524103906)
-//(89.04657671648589,73.37369255558528)
-//(242.03559485753297,219.53205201237546)
