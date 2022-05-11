@@ -80,7 +80,7 @@ object Benchmark {
       ParallelGMM.run(args = args)
     }
     else if (model.equals("rddGMM")) {
-      DistributedGMM.run(args = args, sc = sc)
+      DistributedGMM.run(args = args, sc = sc, parsedData = parsedData, Array(scaleX, scaleY))
     }
 
     val duration1 = (System.nanoTime - t1) / 1e9d
@@ -95,7 +95,7 @@ object Benchmark {
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
     val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
-    conf.set("spark.testing.memory", "2147480000")
+    conf.set("spark.testing.memory", "4294960000")
     val sc = new SparkContext(conf)
 
     val hadoopConfig: Configuration = sc.hadoopConfiguration
@@ -113,16 +113,18 @@ object Benchmark {
     val filename = "../../../datasets/dataset_" + args(3) + "_scaled.txt"
     val scalesFilename = "../../../datasets/scales_" + args(3) + ".txt"
 
+//    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
+//    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
+
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    val points = import_files(filename)
     val scales = import_files(scalesFilename)
     val data = sc.textFile(filename)
     val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
     val scaleX = scales(0)
     val scaleY = scales(1)
 
-    val kPoints = seed.shuffle(points.toList).take(clusters).toArray
+    val kPoints = parsedData.takeSample(false, clusters, 42).map(p => (p(0), p(1)))
 
     println("Fitting with " + args(0) + " on " + args(1) + " model with " + args(2) + " clusters and augmentation set to " + args(3))
     fitSave(model=model,

@@ -1,7 +1,7 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
-import org.apache.spark.mllib.linalg.Vectors
+import org.apache.spark.mllib.linalg.{Vector, Vectors}
 import org.apache.spark.rdd.RDD
 import org.apache.spark.{SparkConf, SparkContext}
 
@@ -54,25 +54,18 @@ object DistributedGMM {
   }
 
 
-  def run(args: Array[String], sc: SparkContext): Unit = {
+  def run(args: Array[String], sc: SparkContext, parsedData: RDD[Vector], scales: Array[(Double, Double)]): Unit = {
 
     // number of clusters
     val K = args(2).toInt
 
-    // file with anchors sizes
-    val filename = "../../../datasets/dataset_" + args(3) + "_scaled.txt"
-    val scalesFilename = "../../../datasets/scales_" + args(3) + ".txt"
 
+    //    val points = import_files(filename)
+    //    val scales = import_files(scalesFilename)
+    //    val data = sc.parallelize(points)
+    //    val parsedData = data.map(s => Vectors.dense(Array(s._1, s._2))).cache()
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-//    val points = import_files(filename)
-//    val scales = import_files(scalesFilename)
-//    val data = sc.parallelize(points)
-//    val parsedData = data.map(s => Vectors.dense(Array(s._1, s._2))).cache()
-
-    val scales = import_files(scalesFilename)
-    val data = sc.textFile(filename)
-    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
 //    val points = parsedData.collect().map(p => (p(0), p(1)))
 
     val scaleX = scales(0)
@@ -154,9 +147,19 @@ object DistributedGMM {
 
   def main(args: Array[String]): Unit = {
     val conf = new SparkConf().setMaster(args(0)).setAppName("DistributeGMM")
-    conf.set("spark.testing.memory", "2147480000")
+    conf.set("spark.testing.memory", "4294960000")
     val sc = new SparkContext(conf)
-    run(args, sc)
+
+    // file with anchors sizes
+    val filename = "datasets/dataset_" + args(3) + "_scaled.txt"
+
+    val data = sc.textFile(filename)
+    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
+
+    val scalesFilename = "datasets/scales_" + args(3) + ".txt"
+    val scales = import_files(scalesFilename)
+
+    run(args, sc, parsedData, scales)
   }
 }
 
