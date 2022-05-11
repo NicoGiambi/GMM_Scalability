@@ -97,7 +97,9 @@ object Benchmark {
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
-    val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
+//    val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
+    val conf = new SparkConf().setAppName("Benchmark")
+
     conf.set("spark.testing.memory", "4294960000")
     val sc = new SparkContext(conf)
 
