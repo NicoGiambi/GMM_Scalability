@@ -61,7 +61,6 @@ object ParallelGMM {
     def training(iter: Int, currentLikelihood: Double, currentClusters: Array[Cluster]): Unit ={
       if (iter >= maxIter) {
         // when training finishes, display duration time and clusters centroids
-        val duration = (System.nanoTime - startTime) / 1e9d
         println()
         println("Final center points:")
         printCentroids(currentClusters, scaleX, scaleY)

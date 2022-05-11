@@ -146,7 +146,7 @@ object Benchmark {
     val scaleY = scales(1)
 
     val kPoints = parsedData match {
-      case Right(x) => x.takeSample(false, clusters, 42).map(p => (p(0), p(1)))
+      case Right(x) => x.takeSample(withReplacement = false, clusters, 42).map(p => (p(0), p(1)))
       case Left(x) => seed.shuffle(x.toList).take(clusters).toArray
     }
 

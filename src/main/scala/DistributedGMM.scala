@@ -141,7 +141,7 @@ object DistributedGMM {
     val K = args(2).toInt
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    val kPoints = parsedData.takeSample(false, K, 42).map(p => (p(0), p(1)))
+    val kPoints = parsedData.takeSample(withReplacement = false, K, 42).map(p => (p(0), p(1)))
 
     val startTime = System.nanoTime()
 
