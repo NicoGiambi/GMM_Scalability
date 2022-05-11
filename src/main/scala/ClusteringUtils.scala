@@ -90,7 +90,7 @@ object ClusteringUtils {
 
   def getHyperparameters (): (Int, Double, Random) = {
     val maxIter = 100
-    val tolerance = 1e-4
+    val tolerance = 0
     val randomSeed = new Random(42)
     (maxIter, tolerance, randomSeed)
   }

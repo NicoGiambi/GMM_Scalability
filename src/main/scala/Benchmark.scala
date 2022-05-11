@@ -1,20 +1,14 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, mmwrite, scale}
 import org.apache.spark.mllib.stat.distribution.MultivariateGaussian
-import org.apache.spark.mllib.clustering.KMeansModel
 import org.apache.spark.{SparkConf, SparkContext}
-import org.apache.spark.mllib.clustering.{GaussianMixture, GaussianMixtureModel, KMeans}
+import org.apache.spark.mllib.clustering.{GaussianMixture, GaussianMixtureModel}
 import org.apache.spark.mllib.linalg.{Matrices, Vector, Vectors}
 import org.apache.spark.rdd.RDD
 import com.github.gradientgmm.GradientGaussianMixture
 import org.apache.hadoop.conf.Configuration
-
-import java.nio.file.{Files, Paths}
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
-
-import scala.runtime.Nothing$
-
 
 object Benchmark {
 
@@ -32,13 +26,7 @@ object Benchmark {
 
     val t1 = System.nanoTime
 
-    if (model.equals("KMeans")) {
-      val est = new KMeans().setK(clusters).setMaxIterations(maxIter).setEpsilon(tolerance).run(parsedData match { case Right(x) => x})
-      est.clusterCenters.sortWith(_ (0) < _ (0)).foreach(println)
-      //      if (!Files.exists(Paths.get(outPath)))
-      //        est.save(sc, outPath)
-    }
-    else if (model.equals("GMM")) {
+    if (model.equals("GMM")) {
       val mvWeights = for (i <- kPoints.indices) yield 1.0 / kPoints.length
       val mvGaussians = for (k_p <- kPoints) yield {
         val initMu = Vectors.dense(Array(k_p._1, k_p._2))
@@ -120,7 +108,7 @@ object Benchmark {
     val model = args(1)
     val clusters = args(2).toInt
 
-    val availableModels = Set("KMeans", "GMM", "SGDGMM", "seqGMM", "parGMM", "rddGMM")
+    val availableModels = Set("mllib", "sgd", "seq", "par", "rdd")
     assert(availableModels.contains(args(1)))
 
     val outPath = "model/" + model + "/"
@@ -134,7 +122,7 @@ object Benchmark {
 
     var parsedData : Either[Array[(Double, Double)], RDD[Vector]] = Left(new Array[(Double, Double)](0))
 
-    if (Set("seqGMM", "parGMM").contains(args(1))){
+    if (Set("seq", "par").contains(args(1))){
       parsedData = Left(import_files(filename))
     }
     else {
@@ -192,52 +180,3 @@ object Benchmark {
     sc.stop()
   }
 }
-
-
-//----------------------------------------
-//
-//Dataset 16 -- 12 core
-//
-//KMeans duration: 93.6907123
-//
-//[26.12619531736289,29.35331810814975]
-//[89.65028233580287,104.61239756541949]
-//[153.33654275703222,267.7527081611716]
-//[266.9311804979041,145.04751738109738]
-//[438.7998353724877,338.2476937506053]
-//
-//----------------------------------------
-//
-//Dataset 16 -- 1 core
-//
-//KMeans duration: 311.3623638
-//
-//[26.12619531736289,29.35331810814975]
-//[89.65028233580287,104.61239756541949]
-//[153.33654275703222,267.7527081611716]
-//[266.9311804979041,145.04751738109738]
-//[438.7998353724877,338.2476937506053]
-
-//----------------------------------------
-//
-//Dataset 1 -- 1 core
-//
-//KMeans duration: 13.9155618
-//
-//[26.12619531736289,29.35331810814975]
-//[89.65028233580287,104.61239756541949]
-//[153.33654275703222,267.7527081611716]
-//[266.9311804979041,145.04751738109738]
-//[438.7998353724877,338.2476937506053]
-
-//----------------------------------------
-//
-//Dataset 1 -- 1 core
-//
-//GMM duration: 192.7647633
-//
-//[10.325164928633521,14.085490970190543]
-//[25.762871742157678,31.37923392165051]
-//[56.38092112134998,65.6480482647342]
-//[118.55649811498574,135.31646379648762]
-//[279.79615734057495,243.11441659012084]
