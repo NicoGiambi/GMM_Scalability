@@ -26,7 +26,7 @@ object Benchmark {
 
     val t1 = System.nanoTime
 
-    if (model.equals("GMM")) {
+    if (model.equals("mllib")) {
       val mvWeights = for (i <- kPoints.indices) yield 1.0 / kPoints.length
       val mvGaussians = for (k_p <- kPoints) yield {
         val initMu = Vectors.dense(Array(k_p._1, k_p._2))
@@ -52,7 +52,7 @@ object Benchmark {
       // if (!Files.exists(Paths.get(outPath)))
       //  est.save(sc, outPath)
     }
-    else if (model.equals("SGDGMM")) {
+    else if (model.equals("sgd")) {
       val est = GradientGaussianMixture.fit(data = parsedData match { case Right(x) => x}, k = clusters, kMeansIters = 0, kMeansTries = 0, maxIter = maxIter).toSparkGMM
       est
         .gaussians
@@ -63,21 +63,21 @@ object Benchmark {
       // if (!Files.exists(Paths.get(outPath)))
       //  est.save(sc, outPath)
     }
-    else if (model.equals("seqGMM")) {
+    else if (model.equals("seq")) {
       SequentialGMM.run(parsedData = parsedData match { case Left(x) => x},
                         kPoints = kPoints,
                         scales = Array(scaleX, scaleY),
                         K = clusters,
                         maxIter = maxIter)
     }
-    else if (model.equals("parGMM")) {
+    else if (model.equals("par")) {
       ParallelGMM.run(parsedData = parsedData match { case Left(x) => x},
                       kPoints = kPoints,
                       scales = Array(scaleX, scaleY),
                       K = clusters,
                       maxIter = maxIter)
     }
-    else if (model.equals("rddGMM")) {
+    else if (model.equals("rdd")) {
       DistributedGMM.run(sc = sc,
                          parsedData = parsedData match { case Right(x) => x},
                          kPoints = kPoints,
@@ -97,8 +97,8 @@ object Benchmark {
     Logger.getLogger("org").setLevel(Level.ERROR)
     Logger.getLogger("akka").setLevel(Level.ERROR)
 
-//    val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
-    val conf = new SparkConf().setAppName("Benchmark")
+    val conf = new SparkConf().setMaster(args(0)).setAppName("Benchmark")
+//    val conf = new SparkConf().setAppName("Benchmark")
 
     conf.set("spark.testing.memory", "4294960000")
     val sc = new SparkContext(conf)
@@ -120,17 +120,20 @@ object Benchmark {
 
     val (maxIter, tolerance, seed) = getHyperparameters()
 
-    val scales = import_files(scalesFilename)
+//    val scales = import_files(scalesFilename)
+    val scales = sc.textFile(scalesFilename).collect().map(s => s.trim.split(' ').map(_.toDouble)).map(p => (p(0), p(1)))
 
     var parsedData : Either[Array[(Double, Double)], RDD[Vector]] = Left(new Array[(Double, Double)](0))
 
     if (Set("seq", "par").contains(args(1))){
-      parsedData = Left(import_files(filename))
+//      parsedData = Left(import_files(filename))
+      parsedData = Left(sc.textFile(filename).collect().map(s => s.trim.split(' ').map(_.toDouble)).map(p => (p(0), p(1))))
     }
     else {
       val data = sc.textFile(filename)
       parsedData = Right(data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache())
     }
+
 
     val scaleX = scales(0)
     val scaleY = scales(1)
