@@ -1,58 +1,11 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
-import org.apache.spark.mllib.linalg.{Vector, Vectors}
+import org.apache.spark.mllib.linalg.Vector
 import org.apache.spark.rdd.RDD
-import org.apache.spark.{SPARK_BRANCH, SparkConf, SparkContext}
-
+import org.apache.spark.SparkContext
 
 object DistributedGMM {
-
-  def expMaxStep (sc: SparkContext, points: DenseMatrix[Double], clusters : RDD[Cluster], K : Int):
-  (RDD[Cluster], Double) = {
-
-    // Expectation step
-    // distribute on columns, i.e. on clusters
-
-    val startTime5 = System.nanoTime
-
-    val gaussians = clusters.map(a => a.gaussian(points, isParallel = false)).collect()
-
-    val duration5 = (System.nanoTime - startTime5) / 1e9d
-    println("gaussians: " + duration5)
-
-    val startTime0 = System.nanoTime
-
-    val gamma_nk = new DenseMatrix(points.cols, K, gaussians.flatten)
-    val totals = sum(gamma_nk(*, ::))
-
-    val duration0 = (System.nanoTime - startTime0) / 1e9d
-    println("gamma_nk: " + duration0)
-
-    val startTime2 = System.nanoTime
-
-    val gaussians_norm = gaussians.flatMap(diag => (DenseVector(diag) / totals).toArray)
-    val gamma_nk_norm = new DenseMatrix(points.cols, K, gaussians_norm).t
-
-    val duration2 = (System.nanoTime - startTime2) / 1e9d
-    println("normalization: " + duration2)
-
-
-
-    val startTime1 = System.nanoTime
-
-    // Maximization step
-    val newClusters = clusters.map(_.maximizationStep(points, gamma_nk_norm))
-
-    val duration1 = (System.nanoTime - startTime1) / 1e9d
-    println("maximization_step: " + duration1)
-
-    val sampleLikelihood = log(totals)
-    val likelihood = sum(sampleLikelihood)
-
-    (newClusters, likelihood)
-  }
-
 
   def run(sc: SparkContext,
           parsedData: RDD[Vector],
@@ -64,16 +17,21 @@ object DistributedGMM {
     val scaleX = scales(0)
     val scaleY = scales(1)
 
+    // initialize an RDD of Clusters
     var clusters : RDD[Cluster] = sc.parallelize(kPoints.zipWithIndex.map{
-      case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
+      case (k_p, id) => new Cluster(id = id,
+                                    pi_k = 1.0 / K,
+                                    center = DenseVector(Array(k_p._1, k_p._2)),
+                                    covariance = DenseMatrix.eye[Double](2))
     }).cache()
 
+    // dataset as matrix (2 x nPoints)
     val pointsM = new DenseMatrix(2, parsedData.count().toInt, parsedData.flatMap(a => List(a(0), a(1))).collect())
 
     println("Starting Centroids: ")
     printCentroids(clusters.collect(), scaleX, scaleY)
 
-    // use maxIter as stopping criteria
+    // we expand the ExpectationStep in the main because .collect() exhaust heap space
     var iter = 0
     var likelihood = 0.0
     var gaussians = new Array[Array[Double]](0)
@@ -103,8 +61,6 @@ object DistributedGMM {
       val sampleLikelihood = log(totals)
       likelihood = sum(sampleLikelihood)
 
-      System.gc()
-
       duration = (System.nanoTime - startTime) / 1e9d
 
       println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood + ", Duration: " + duration)
@@ -120,40 +76,6 @@ object DistributedGMM {
 
     println("Likelihood:")
     println(likelihood)
-  }
-
-
-  def main(args: Array[String]): Unit = {
-    val conf = new SparkConf().setMaster(args(0)).setAppName("DistributeGMM")
-    conf.set("spark.testing.memory", "4294960000")
-    val sc = new SparkContext(conf)
-
-    // file with anchors sizes
-    val filename = args(4) + "dataset_" + args(3) + "_scaled.txt"
-    val scalesFilename = args(4) + "scales_" + args(3) + ".txt"
-
-    val data = sc.textFile(filename)
-    val parsedData = data.map(s => Vectors.dense(s.trim.split(' ').map(_.toDouble))).cache()
-
-    val scales = import_files(scalesFilename)
-
-    // number of clusters
-    val K = args(2).toInt
-    val (maxIter, tolerance, seed) = getHyperparameters()
-
-    val kPoints = parsedData.takeSample(withReplacement = false, K, 42).map(p => (p(0), p(1)))
-
-    val startTime = System.nanoTime()
-
-    run(sc = sc,
-        parsedData = parsedData,
-        kPoints = kPoints,
-        scales = scales,
-        K = K,
-        maxIter = maxIter)
-
-    val duration = (System.nanoTime - startTime) / 1e9d
-    println("distributedGMM duration: " + duration)
   }
 }
 

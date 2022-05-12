@@ -1,14 +1,13 @@
 import ClusteringUtils._
 import breeze.linalg.{DenseMatrix, DenseVector, _}
 import breeze.numerics.log
-
 import scala.annotation.tailrec
 
 
 object SequentialGMM {
 
   def expMaxStep (points: DenseMatrix[Double], clusters : Array[Cluster]):
-  (Array[Cluster], DenseMatrix[Double], Double) = {
+                 (Array[Cluster], Double) = {
 
     // Expectation step
     val gamma_nk = DenseMatrix.zeros[Double](points.cols, clusters.length)
@@ -22,7 +21,6 @@ object SequentialGMM {
       (for (i <- 0 until gamma_nk.cols)
         yield gamma_nk(::, i) / totals) :_*)
 
-
     // Maximization step
     val newClusters = new Array[Cluster](clusters.length)
     for (i <- clusters.indices) {
@@ -32,7 +30,7 @@ object SequentialGMM {
     val sampleLikelihood = log(totals)
     val likelihood = sum(sampleLikelihood)
 
-    (newClusters, gamma_nk_norm, likelihood)
+    (newClusters, likelihood)
   }
 
 
@@ -45,18 +43,21 @@ object SequentialGMM {
     val scaleX = scales(0)
     val scaleY = scales(1)
 
+    // initialize an Array of Clusters
     val clusters : Array[Cluster] = kPoints.zipWithIndex.map{
-      case (k_p, id) => new Cluster(id, 1.0 / K, DenseVector(Array(k_p._1, k_p._2)), DenseMatrix.eye[Double](2))
+      case (k_p, id) => new Cluster(id = id,
+                                    pi_k = 1.0 / K,
+                                    center = DenseVector(Array(k_p._1, k_p._2)),
+                                    covariance = DenseMatrix.eye[Double](2))
     }
 
+    // dataset as matrix (2 x nPoints)
     val pointsM = new DenseMatrix(2, parsedData.length, parsedData.flatMap(a => List(a._1, a._2)))
 
     println("Starting Centroids: ")
     printCentroids(clusters, scaleX, scaleY)
 
-    // use maxIter as stopping criteria
-    val oldLikelihood = 0.0
-
+    // tail recursion on the ExpMax step
     @tailrec
     def training(iter: Int, currentLikelihood: Double, currentClusters: Array[Cluster]): Unit ={
 
@@ -76,7 +77,7 @@ object SequentialGMM {
       else {
         // training step
         val startTime = System.nanoTime
-        val (newClusters, gammaNK, likelihood) = expMaxStep(pointsM, currentClusters)
+        val (newClusters, likelihood) = expMaxStep(pointsM, currentClusters)
         val duration = (System.nanoTime - startTime) / 1e9d
 
         println("Epoch: " + (iter + 1) + ", Likelihood: " + likelihood + ", Duration: " + duration)
@@ -85,38 +86,7 @@ object SequentialGMM {
       }
     }
 
-    training(0, oldLikelihood, clusters)
+    training(0, 0.0, clusters)
 
   }
-
-  def main(args: Array[String]): Unit = {
-
-    val filename = args(4) + "dataset_" + args(3) + "_scaled.txt"
-    val scalesFilename = args(4) + "scales_" + args(3) + ".txt"
-
-    val (maxIter, tolerance, seed) = getHyperparameters()
-
-    val points = import_files(filename)
-    val scales = import_files(scalesFilename)
-    val K = args(2).toInt
-
-    println("Number of points:")
-    println(points.length)
-
-    // take 5 random points as initial clusters' center
-    val kPoints = seed.shuffle(points.toList).take(K).toArray
-
-    val startTime = System.nanoTime()
-
-    run(parsedData = points,
-        scales = scales,
-        kPoints = kPoints,
-        K = K,
-        maxIter = maxIter)
-
-    val duration = (System.nanoTime - startTime) / 1e9d
-    println("sequentialGMM duration: " + duration)
-  }
-
 }
-
