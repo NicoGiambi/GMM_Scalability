@@ -2,9 +2,9 @@
 This project propose a study on the scalability of the Gaussian Mixture Model, an unsupervised machine learning technique.
 It's a probability-based clustering technique that we applied on COCO dataset and explored in different versions: 
 
--sequential
--parallel
--distributed.
+- sequential
+- parallel
+- distributed.
 
 In particular, we conduct a benchmark not only among sequential, parallel and distributed versions, but also among
 our implementation of GMM with:
