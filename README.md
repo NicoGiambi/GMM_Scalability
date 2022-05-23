@@ -18,7 +18,7 @@ To make linea algebra computations we use Breeze 2.0.1.
 Cloud computing is performed with Google Cloud Platform, using Google Cloud Storage and Google Dataproc.
 
 # Project Structure
-Source code in Scala+Spark is in ... folder.
+Source code in Scala+Spark is in src/main/scala folder.
 Python preprocessing of COCO dataset is python-scripts.
 In gcp folder there are bash scripts to allocate resources on Google Cloud Storage and run jobs with Google Dataproc.
 
