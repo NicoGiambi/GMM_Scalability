@@ -19,6 +19,7 @@ Cloud computing is performed with Google Cloud Platform, using Google Cloud Stor
 
 # Project Structure
 Source code in Scala+Spark is in src/main/scala folder.
+Datasets folder contain the original version of COCO dataset.
 Python preprocessing of COCO dataset is python-scripts.
 In gcp folder there are bash scripts to allocate resources on Google Cloud Storage and run jobs with Google Dataproc.
 
